@@ -1,0 +1,29 @@
+# ── Excluded per project requirements ────────────────────────────────────────
+bob-task-*.json
+FACILITATOR_GUIDE.md
+Planning Analytics Workshop Schedule.pdf
+
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Archives ──────────────────────────────────────────────────────────────────
+*.zip
+# Exception: the Bob skill download used in Lab 0
+!lab-00-setup/planning-analytics-skill.zip
+
+# ── Editor ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ── Backup folder ────────────────────────────────────────────────────────────
+Backup/
+
+# macOS zip artifacts
+__MACOSX/
