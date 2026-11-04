@@ -27,7 +27,10 @@ set -euo pipefail
 : "${WXO_URL:?Set WXO_URL to the service instance URL from Orchestrate Settings > API details}"
 : "${PA_MCP_URL:?Set PA_MCP_URL to http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp}"
 PA_USER="${PA_USER:-pm}"
-ENV_NAME="${ENV_NAME:-workshop}"
+# One ADK environment per Orchestrate instance, named after the instance ID, so a re-run
+# reuses the right one and a second instance never reuses the first one's URL.
+INSTANCE_ID="${WXO_URL%/}"; INSTANCE_ID="${INSTANCE_ID##*/}"
+ENV_NAME="${ENV_NAME:-wxo-$(printf '%s' "$INSTANCE_ID" | tr -cd 'A-Za-z0-9' | cut -c1-8)}"
 VARIANT="${VARIANT:-}"
 case "$VARIANT" in
   "") SUFFIX="" ;;
