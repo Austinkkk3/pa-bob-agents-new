@@ -68,9 +68,11 @@ MCP (Model Context Protocol) is the bridge that lets Bob call your Planning Anal
 It looks like one of these:
 
 ```
+http://<region>.services.cloud.techzone.ibm.com:<PORT>/?accountId=<ACCOUNT_ID>&tenantId=<TENANT_ID>&perspective=pa-home
 http://192.168.100.50:8080/api/abc123def/v0/...
-http://pa-demo.techzone.ibm.com:443/api/abc123def/v0/...
 ```
+
+The first form is the Planning Analytics Workspace link on the TechZone reservation page; either form works.
 
 Where to find it:
 - Your facilitator will display it on the screen, **or**
@@ -96,7 +98,8 @@ Password: IBMDem0s
 
 Please configure my MCP connection by doing the following:
 1. Parse the HOST, PORT, and TENANT_ID out of the URL I gave you.
-   The URL format is: http://<HOST>:<PORT>/api/<TENANT_ID>/v0/...
+   The URL is either http://<HOST>:<PORT>/api/<TENANT_ID>/v0/...
+   or http://<HOST>:<PORT>/?accountId=...&tenantId=<TENANT_ID>&... (use the tenantId value, not the accountId).
 2. Compute the Base64 encoding of "pm:IBMDem0s" — the result is cG06SUJNRGVtMHM=
 3. Read the MCP template from lab-00-setup/mcp.json in my workspace.
 4. Substitute all four placeholders in the template:
