@@ -9,7 +9,7 @@
 
 Confirm `FPA_Variance` cube is loaded and spot-check the key variances the autopilot will investigate.
 
-> **If you completed Lab 1 Exercise 5**, the cube is already loaded — run the check below and move on (~2 min).
+> The shared `FPA_Variance` cube on `smartco` is loaded by your facilitator before the session. Run the check below and move on (~2 min). (Your own Lab 1 Exercise 5 model is a separate copy on `DemoGuide`.)
 
 ---
 
@@ -44,7 +44,7 @@ Bob also lists roll-up rows that cross the threshold (TOTAL-COMPANY, BU-PROD and
 
 ![Flagged variances for January 2024](../assets/screenshots/lab2-0-02-variance-flags.jpg)
 
-> If the cube is missing, ask your facilitator or re-run Lab 1 Exercise 5 (~8 min).
+> If the cube is missing, ask your facilitator. Do not rebuild it yourself: Lab 2 and Lab 3 need the exact shared copy on `smartco`.
 
 ---
 
