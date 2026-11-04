@@ -47,29 +47,30 @@ Exercise 5 has every participant build a cube, 6 dimensions and several TI proce
 
 ## Section 2 — watsonx Orchestrate
 
-Used in Lab 2 only. Each participant gets their own Orchestrate environment.
+Used in Lab 2 only. Recommended setup: one Orchestrate environment per group, paired with that group's Planning Analytics environment and shared with the group's participants. The agents in an Orchestrate environment can only read the PA environment their connection points to.
 
-### How to provision participant environments
+### Set up each group's Orchestrate
 
-1. Go to your IBM TechZone reservation or IBM Cloud account
-2. For each participant, provision a **watsonx Orchestrate** instance or share access to your tenant
-3. Each participant logs in at their own Orchestrate URL (format: `https://<tenant>.watson-orchestrate.ibm.com`)
+1. Reserve a watsonx Orchestrate environment in IBM TechZone (watsonx collection), one per PA environment.
+2. Pre-build the two Lab 2 agents for the [Ready-to-use path](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md): run [`setup-agents.sh`](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/setup-agents.sh) with that group's `WXO_URL` and `PA_MCP_URL` and **no** `VARIANT`. It takes about 5 minutes, asks for the Orchestrate API key and the PA password in the terminal, and checks the password against PA before storing it.
+3. Test in Orchestrate → **Chat** → **FP&A Variance Autopilot**, January 2024: 4 material variances, revenue -$147,000 (-7.44%).
+4. Add the participants with the reservation's **Share** menu (the IBMid email each person sent you). Try it first with one internal and one external address.
+
+- Fast Path participants build their own copy with their initials (`VARIANT`), so the shared agents are not touched.
+- If a shared agent gets changed, re-run `setup-agents.sh` without `VARIANT`: it updates both agents in place.
+- If you sign in to several groups' environments yourself, a suffix in the agents' display names (for example `(2)` for group B) helps tell them apart. Change only `display_name`, never `name`.
 
 ### What to share with each participant
 
-Give each person a credential card with:
+Give each person a card for their group. Keep it out of the public repo: it holds environment addresses and the shared password.
 
 | Item | Value |
 |------|-------|
-| Orchestrate URL | `https://<their-tenant>.watson-orchestrate.ibm.com` |
-| Login | IBM ID (their own) or shared credentials |
-| PA MCP URL | `http://<TECHZONE_HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp` |
-| PA Username | `pm` |
-| PA Password | `IBMDem0s` |
-
-### If using a shared tenant (simplest option)
-
-All participants log into **your** Orchestrate tenant. Ask each person to prefix their agent names with their initials to avoid collisions (e.g. `JD-PA-Data-Agent`).
+| Group | A or B |
+| Orchestrate | Link from the TechZone share invitation; sign in with their own IBMid |
+| PA link for Bob (Lab 0) | `http://<TECHZONE_HOST>:<PORT>/?tenantId=<TENANT_ID>…` from the group's reservation |
+| PA username / password | `pm` / `IBMDem0s` |
+| Fallback MCP config | The group's ready-made `mcp.json`: the [Lab 0 template](lab-00-setup/mcp.json) with the group's host, port, tenant and `cG06SUJNRGVtMHM=` filled in |
 
 ---
 
@@ -133,7 +134,7 @@ Expected: `FPA_Build_Dimensions`, `FPA_Build_Time`, `FPA_Load_Facts`, `FPA_Write
 | `<TENANT_ID>` | Lab 0, 1, 2, 3 | TechZone reservation details |
 | `<PA_USERNAME>` | Lab 0, 1, 2, 3 | `pm` |
 | `<PA_PASSWORD>` | Lab 0, 1, 2, 3 | `IBMDem0s` |
-| `<ORCHESTRATE_URL>` | Lab 2 | Per-participant Orchestrate tenant |
+| `<ORCHESTRATE_URL>` | Lab 2 | The group's Orchestrate service instance URL (Settings → API details) |
 
 ---
 

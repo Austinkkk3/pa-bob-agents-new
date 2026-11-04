@@ -48,7 +48,7 @@ Expected: 6 dimensions — FPA_Account, FPA_Department, FPA_Scenario, FPA_Time, 
 |-----|----------------|----------|
 | [Lab 0](lab-00-setup/README.md) | MCP config, skill, mode | Bob settings |
 | [Lab 1](lab-01-bob-planning-analytics-mcp/README.md) | Query, analyse, build TM1 model | Bob + PA MCP |
-| [Lab 2](lab-02-fpa-variance-autopilot/README.md) | Multi-agent variance autopilot ([⚡ fast path](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/README.md): Bob builds it) | watsonx Orchestrate |
+| [Lab 2](lab-02-fpa-variance-autopilot/README.md) | Multi-agent variance autopilot ([🚀 ready to use](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md) · [⚡ fast path](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/README.md): Bob builds it) | watsonx Orchestrate |
 | [Lab 3](lab-03-forecast-replan-autopilot/README.md) | Forecast write-back to PA | Bob |
 
 ---
