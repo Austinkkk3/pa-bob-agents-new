@@ -93,7 +93,7 @@ For example, step 3 of the prompt could end up like this:
 
 ```
    WXO_URL=https://api.ca-tor.watson-orchestrate.cloud.ibm.com/instances/b1269f10-...
-   PA_MCP_URL=http://useast.services.cloud.techzone.ibm.com:45158/api/EZXHLSXGX9VK/v0/agentic-ai/cube/mcp
+   PA_MCP_URL=http://xx.services.cloud.techzone.ibm.com:30123/api/TENANT123/v0/agentic-ai/cube/mcp
    VARIANT=AZ
 ```
 

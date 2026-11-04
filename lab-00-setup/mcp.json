@@ -4,7 +4,7 @@
       "type": "streamable-http",
       "url": "http://<TECHZONE_HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/analysis/mcp",
       "headers": {
-        "Authorization": "Basic <BASE64_CREDENTIALS>",
+        "Authorization": "Basic cG06SUJNRGVtMHM=",
         "Accept": "text/event-stream",
         "Cache-Control": "no-cache"
       },
@@ -24,7 +24,7 @@
       "type": "streamable-http",
       "url": "http://<TECHZONE_HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp",
       "headers": {
-        "Authorization": "Basic <BASE64_CREDENTIALS>",
+        "Authorization": "Basic cG06SUJNRGVtMHM=",
         "Accept": "text/event-stream",
         "Cache-Control": "no-cache"
       },

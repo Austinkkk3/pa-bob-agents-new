@@ -48,13 +48,13 @@
     <available_servers>
       <server name="ibm-pa-tools-tz-server">
         <type>TM1 Process Management</type>
-        <endpoint>http://na4.services.cloud.techzone.ibm.com:38912/api/EZXHLSXGX9VK/v0/agentic-ai/analysis/mcp</endpoint>
+        <endpoint>http://&lt;TECHZONE_HOST&gt;:&lt;PORT&gt;/api/&lt;TENANT_ID&gt;/v0/agentic-ai/analysis/mcp (set in .bob/mcp.json, Lab 0)</endpoint>
         <capabilities>Process creation, execution, monitoring, error log retrieval</capabilities>
       </server>
       
       <server name="ibm-pa-tools-tz-cube">
         <type>Cube Data & Analysis</type>
-        <endpoint>http://na4.services.cloud.techzone.ibm.com:38912/api/EZXHLSXGX9VK/v0/agentic-ai/cube/mcp</endpoint>
+        <endpoint>http://&lt;TECHZONE_HOST&gt;:&lt;PORT&gt;/api/&lt;TENANT_ID&gt;/v0/agentic-ai/cube/mcp (set in .bob/mcp.json, Lab 0)</endpoint>
         <capabilities>Data exploration, MDX queries, variance analysis, outlier detection, impact analysis</capabilities>
       </server>
       

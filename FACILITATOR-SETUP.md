@@ -23,13 +23,13 @@ TechZone shared instance — used in Lab 0, Lab 1, Lab 2, Lab 3.
 http://<TECHZONE_HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp
 ```
 
-**Bob MCP config** (`~/.bob/settings/mcp.json`) — already configured in Lab 0. No changes needed for Lab 2/3.
+**Bob MCP config** (`.bob/mcp.json` in each participant's workshop folder) — pasted in by hand in Lab 0 Step 2. No changes needed for Lab 2/3.
 
 ---
 
-### Skill download for Lab 0
+### Mode and skill for Lab 0
 
-Participants download the Bob skill from [`lab-00-setup/planning-analytics-skill.zip`](lab-00-setup/planning-analytics-skill.zip). If you change anything in `planning-analytics-skill/`, rebuild the zip from the repo root so the two stay in sync:
+Participants get the Planning Analytics mode, its rules and the skill by opening the whole repo folder in Bob (all in `.bob/`). The zip [`lab-00-setup/planning-analytics-skill.zip`](lab-00-setup/planning-analytics-skill.zip) is kept for anyone who wants the skill elsewhere. If you change anything in `planning-analytics-skill/`, copy it to `.bob/skills/planning-analytics/` and rebuild the zip from the repo root so all three stay in sync:
 
 ```bash
 rm -f lab-00-setup/planning-analytics-skill.zip && zip -rX lab-00-setup/planning-analytics-skill.zip planning-analytics-skill
@@ -70,7 +70,7 @@ Give each person a card for their group. Keep it out of the public repo: it hold
 | Orchestrate | Link from the TechZone share invitation; sign in with their own IBMid |
 | PA link for Bob (Lab 0) | `http://<TECHZONE_HOST>:<PORT>/?tenantId=<TENANT_ID>…` from the group's reservation |
 | PA username / password | `pm` / `IBMDem0s` |
-| Fallback MCP config | The group's ready-made `mcp.json`: the [Lab 0 template](lab-00-setup/mcp.json) with the group's host, port, tenant and `cG06SUJNRGVtMHM=` filled in |
+| MCP config for Bob (Lab 0 Step 2) | The group's ready-made `mcp.json`: the [Lab 0 template](lab-00-setup/mcp.json) with the group's host, port and tenant filled in. Participants paste it into `.bob/mcp.json`; the fastest way through Lab 0 |
 
 ---
 

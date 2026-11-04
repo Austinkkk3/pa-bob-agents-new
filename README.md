@@ -10,7 +10,7 @@
 
 | | Lab | What you do |
 |-|-----|-------------|
-| 🛠 | [Lab 0 — Setup](./lab-00-setup/README.md) | Install PA mode & skill, configure MCP — all via Bob |
+| 🛠 | [Lab 0 — Setup](./lab-00-setup/README.md) | Open the workshop folder in Bob (PA mode & skill load with it), paste your group's MCP config |
 | 📊 | [Lab 1 — Bob + PA via MCP](./lab-01-bob-planning-analytics-mcp/README.md) | Query TM1 cubes, run variance analysis, build a model from CSV |
 | 🤖 | [Lab 2 — FP&A Variance Autopilot](./lab-02-fpa-variance-autopilot/README.md) | Build agents in watsonx Orchestrate that detect material variances in PA, read the root causes stored in the cube and write a CFO-ready report. Use the [🚀 pre-built agents](./lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md), or take the [⚡ fast path](./lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/README.md) and let Bob build your own copy |
 | ✍️ | [Lab 3 — Forecast Replan with Bob](./lab-03-forecast-replan-autopilot/README.md) *(optional)* | Use Bob to calculate an adjusted Q1 forecast and write it back to PA |
@@ -50,7 +50,7 @@
 
 ```
 pa-bob-agents-new/
-├── lab-00-setup/                         ← Environment setup (Bob-assisted)
+├── lab-00-setup/                         ← Environment setup: MCP template
 ├── lab-01-bob-planning-analytics-mcp/    ← Lab 1: Bob + PA via MCP
 │   └── assets/                           ← CSV files for Exercise 5
 ├── lab-02-fpa-variance-autopilot/        ← Lab 2: FP&A Variance Autopilot
@@ -59,7 +59,7 @@ pa-bob-agents-new/
 │   ├── lab-02-fast-path-build-with-bob/  ← Fast path: Bob builds both agents with the Orchestrate ADK
 │   └── lab-02-*/                         ← Step-by-step sub-labs (2.0, 2.1, 2.2, 2.5; optional: 2.7, 2.8)
 ├── lab-03-forecast-replan-autopilot/     ← Lab 3 (optional): forecast write-back with Bob
-├── planning-analytics-skill/             ← Bob skill installed in Lab 0
+├── planning-analytics-skill/             ← Bob skill (also in .bob/skills/, loaded with the folder)
 ├── session-03-your-scenario/             ← Adapt to your use case
 └── archive/                              ← Retired CRM/ERP extension (not part of the workshop)
 ```
