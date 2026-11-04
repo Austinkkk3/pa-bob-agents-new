@@ -1,152 +1,104 @@
 # Lab 0 — Environment Setup
 
 **Duration:** 10–15 minutes  
-**Goal:** Install the Planning Analytics Bob mode & skill, configure MCP, and validate connectivity — all using Bob.
+**Goal:** Open the workshop folder in Bob (this loads the Planning Analytics mode and skill), connect Bob to your group's Planning Analytics, and check the connection.
 
 ---
 
 ## Prerequisites
 
-- IBM Bob IDE installed and logged in ([download here](https://bob.ibm.com/download))
-- Your TechZone Planning Analytics URL (from your facilitator or your reservation page)
-- Workshop folder open as your workspace root in Bob
+- IBM Bob installed and signed in ([download here](https://bob.ibm.com/download))
+- Your group's Planning Analytics link, or your group's ready-made MCP configuration, from your facilitator
 
 > ⚠️ **Planning Analytics version must be 2.1.20** — other versions are not compatible with the MCP tools used in this workshop.
 
 ---
 
-## Step 1 — Install the Skill
+## Step 1 — Open the workshop folder in Bob
 
-**Download the skill first:**
-Click **[planning-analytics-skill.zip](https://github.com/Austinkkk3/pa-bob-agents-new/raw/main/lab-00-setup/planning-analytics-skill.zip)** to download it, then unzip it. You get a `planning-analytics-skill` folder with `SKILL.md`, `README.md` and `USAGE-GUIDE.md`; note where it is on your computer. If you cloned the repo, the same folder is at [`planning-analytics-skill/`](../planning-analytics-skill/).
+**Get the folder**, either way:
 
-> **Alternative:** Download directly from the IBM Building Blocks repo:
-> Skill ZIP → [planning-analytics-skill.zip](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/budget-and-forecasting/bob-skills/planning-analytics-skill.zip)
-> Mode ZIP → [planning-analytics-mode.zip](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/budget-and-forecasting/bob-modes/base-modes/planning-analytics-mode.zip)
+- With git:
+  ```bash
+  git clone https://github.com/Austinkkk3/pa-bob-agents-new.git
+  ```
+- Without git: on the [repo page](https://github.com/Austinkkk3/pa-bob-agents-new), click **Code** → **Download ZIP**, then unzip it.
 
-**Then drag the folder into Bob's chat panel**, and send this message:
+**Open it in Bob:** **File** → **Open Folder…** → select the `pa-bob-agents-new` folder (the one that contains `README.md`).
 
-```
-I've uploaded the planning-analytics-skill folder.
-Please install it as a Bob skill:
-1. Create the directory .bob/skills/planning-analytics/ in my workspace
-2. Copy all files from the uploaded folder into .bob/skills/planning-analytics/
-3. Confirm the files SKILL.md, README.md, and USAGE-GUIDE.md are in place
-Then I'll restart Bob.
-```
+Open the whole folder, not a subfolder. The Planning Analytics mode, its rules and the skill are in the `.bob` folder at the top of the repo, and Bob loads them only when that folder is the workspace. Nothing to install or restart.
 
-After Bob confirms, restart Bob: `Cmd+Shift+P` → **Bob: Restart**
+✅ **Done when:**
 
-✅ **Done when:** Ask Bob `What skills do you have available?` — `planning-analytics` appears in the list.
+- The mode selector under the Bob chat shows **📊 Planning Analytics**. If it shows another mode, click it and pick Planning Analytics.
 
----
+  ![Mode selector showing Planning Analytics](assets/screenshots/lab0-02-mode-selector.jpg)
 
-## Step 1b — Install the Planning Analytics Mode *(optional)*
+- In the Bob panel, click ⚙ (**Settings**) → **Skills**, and set the filter to **Workspace**: `planning-analytics` is listed and active.
 
-The mode gives Bob deeper TM1 expertise and financial analysis workflows. Download `planning-analytics-mode.zip` from the [Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/optimize/budget-and-forecasting/bob-modes/base-modes), then tell Bob:
-
-```
-I've downloaded planning-analytics-mode.zip.
-Please install it as a Bob mode:
-1. Create .bob/modes/ if it doesn't exist
-2. Unzip planning-analytics-mode.zip into .bob/modes/planning-analytics/
-3. Move .bob/modes/planning-analytics/custom_modes.yaml to .bob/custom_modes.yaml
-Then I'll restart Bob.
-```
-
-After Bob confirms, restart Bob. The mode selector should show **📊 Planning Analytics**.
+  ![Skills tab, Workspace filter: planning-analytics is active](assets/screenshots/lab0-01-workspace-skill.jpg)
 
 ---
 
-## Step 2 — Configure MCP
+## Step 2 — Connect Bob to Planning Analytics
 
-MCP (Model Context Protocol) is the bridge that lets Bob call your Planning Analytics TM1 server directly. The whole setup is one prompt — just paste your TechZone URL and Bob does the rest.
+MCP (Model Context Protocol) is the bridge that lets Bob call your Planning Analytics TM1 server directly. The connection is a small settings file, `.bob/mcp.json`, in the workshop folder. **You paste it in yourself; about two minutes.** Don't ask Bob to write it for you: the file holds the PA sign-in for a plain `http` address, and Bob may refuse to write that, so the result differs from laptop to laptop.
 
-### What you need
+### 2a. Open the file
 
-**One URL** — your Planning Analytics TechZone environment URL.  
-It looks like one of these:
+In the Bob panel: ⚙ (**Settings**) → **MCP** → **+** → **Configuration Scope**: `pa-bob-agents-new` → **Open Configuration File**.
 
-```
-http://<region>.services.cloud.techzone.ibm.com:<PORT>/?accountId=<ACCOUNT_ID>&tenantId=<TENANT_ID>&perspective=pa-home
-http://192.168.100.50:8080/api/abc123def/v0/...
-```
+![Add MCP Server, scope set to the workshop folder](assets/screenshots/lab0-03-add-mcp-server.jpg)
 
-The first form is the Planning Analytics Workspace link on the TechZone reservation page; either form works.
+Bob creates `.bob/mcp.json` and opens it. It contains only `{ "mcpServers": {} }`.
 
-Where to find it:
-- Your facilitator will display it on the screen, **or**
-- Go to [techzone.ibm.com](https://techzone.ibm.com) → **My Reservations** → click your environment → copy the **Planning Analytics URL**
+### 2b. Paste your group's configuration
 
-Your login credentials for this workshop are fixed:
+Select everything in the file (**Cmd+A**, or **Ctrl+A** on Windows) and paste over it:
 
-| Field | Value |
-|-------|-------|
-| Username | `pm` |
-| Password | `IBMDem0s` |
+- **Your facilitator gave you your group's configuration:** paste it as it is and save (**Cmd+S** / **Ctrl+S**). Go to 2c.
+- **You only have the Planning Analytics link:** paste the template [`lab-00-setup/mcp.json`](mcp.json), then replace three placeholders, each in **both** `url` lines:
 
----
+| Placeholder | Where it is in your link | Example |
+|-------------|--------------------------|---------|
+| `<TECHZONE_HOST>` | Between `http://` and `:` | `xx.services.cloud.techzone.ibm.com` |
+| `<PORT>` | The number after `:` | `30123` |
+| `<TENANT_ID>` | The `tenantId=` value, **not** `accountId=` | `TENANT123` |
 
-### The prompt — paste this into Bob
+The link looks like `http://xx.services.cloud.techzone.ibm.com:30123/?accountId=ACCOUNT456&tenantId=TENANT123&perspective=pa-home`. Your values are different; the facilitator shows your group's link on screen, or find it on the TechZone reservation page as the Planning Analytics Workspace link.
 
-Copy the block below, **replace the URL on the first line** with your real TechZone URL, then send it to Bob:
+Leave the `Authorization` lines as they are: `Basic cG06SUJNRGVtMHM=` is the workshop user `pm` / `IBMDem0s`. Then save.
 
-```
-My Planning Analytics TechZone URL is: http://<YOUR_TECHZONE_URL_HERE>
-Username: pm
-Password: IBMDem0s
+![The template in .bob/mcp.json, before the three values are replaced](assets/screenshots/lab0-04-mcp-json-template.jpg)
 
-Please configure my MCP connection by doing the following:
-1. Parse the HOST, PORT, and TENANT_ID out of the URL I gave you.
-   The URL is either http://<HOST>:<PORT>/api/<TENANT_ID>/v0/...
-   or http://<HOST>:<PORT>/?accountId=...&tenantId=<TENANT_ID>&... (use the tenantId value, not the accountId).
-2. Compute the Base64 encoding of "pm:IBMDem0s" — the result is cG06SUJNRGVtMHM=
-3. Read the MCP template from lab-00-setup/mcp.json in my workspace.
-4. Substitute all four placeholders in the template:
-   - <TECHZONE_HOST> → the HOST you parsed
-   - <PORT>          → the PORT you parsed
-   - <TENANT_ID>     → the TENANT_ID you parsed
-   - <BASE64_CREDENTIALS> → cG06SUJNRGVtMHM=
-5. Open Cmd+Shift+P → Bob: Open MCP Settings and replace the entire
-   contents of mcp.json with the fully substituted JSON.
-6. Save the file.
-7. Run Cmd+Shift+P → Bob: Restart.
-8. After restarting, call the list-servers tool and confirm DemoGuide
-   appears in the response.
-```
+> 💡 Not sure which part is which? Ask Bob to read the link for you, then type the values in yourself:
+> ```
+> From this Planning Analytics link, give me the HOST, the PORT and the TENANT_ID (the tenantId value, not the accountId): <your link>
+> ```
 
-Bob will parse the URL, fill in `mcp.json`, save it, restart, and verify the connection — no manual editing required.
+### 2c. Check the connection
 
----
+Go back to the **Bob Settings** tab → **MCP**, and set the filter to **Workspace servers**. Within a few seconds `ibm-pa-tools-tz-server` and `ibm-pa-tools-tz-cube` show **Connected**. Bob picks up the saved file by itself; no restart is needed. If the list is empty, click ↻ (refresh).
 
-### What Bob does behind the scenes
+![Both workspace MCP servers connected](assets/screenshots/lab0-05-mcp-connected.jpg)
 
-Given the URL `http://192.168.100.50:8080/api/abc123def/v0/agentic-ai/...`, Bob extracts:
-
-| Placeholder | Extracted value |
-|-------------|----------------|
-| `<TECHZONE_HOST>` | `192.168.100.50` |
-| `<PORT>` | `8080` |
-| `<TENANT_ID>` | `abc123def` |
-| `<BASE64_CREDENTIALS>` | `cG06SUJNRGVtMHM=` |
-
-It then writes these into **both** server blocks in `mcp.json` (`ibm-pa-tools-tz-server` and `ibm-pa-tools-tz-cube`), saves, and restarts.
-
----
-
-✅ **Done when:** Bob confirms it can see `DemoGuide` (or another TM1 server name) after restarting.
+> 🔒 `.bob/mcp.json` is in the repo's `.gitignore`, so your group's address is never committed if you push your copy.
 
 ---
 
 ## Step 3 — Validate
 
-Switch to **📊 Planning Analytics** mode and send:
+In **📊 Planning Analytics** mode, start a new task and send:
 
 ```
 List all available TM1 servers
 ```
 
-✅ **Done when:** Bob returns at least one server name (e.g. `DemoGuide`).
+✅ **Done when:** Bob lists 14 servers, including `smartco`.
+
+![Bob lists the TM1 servers through the PA MCP server](../lab-01-bob-planning-analytics-mcp/assets/screenshots/lab1-ex1-01-list-servers.jpg)
+
+Listing servers works right away. Queries that read cube data need the Planning Analytics query engine to be warmed up once per environment; your facilitator does this before the session. If your first data query in Lab 1 fails with `409` or "Tool invocation failed", see the last row of Troubleshooting.
 
 ---
 
@@ -154,11 +106,20 @@ List all available TM1 servers
 
 | Symptom | Fix |
 |---------|-----|
-| Mode not in selector | Check `.bob/custom_modes.yaml` exists → restart Bob |
-| `401 Unauthorized` | Credentials wrong — confirm `pm` / `IBMDem0s` and that the Base64 value is `cG06SUJNRGVtMHM=` |
-| `Connection refused` | Wrong HOST or PORT — re-check the URL with your facilitator; confirm you are on the same network |
-| MCP servers show disconnected | Save `mcp.json` → Bob: Restart |
-| Bob says it cannot find the URL pattern | Paste just the base URL (up to and including the TENANT_ID segment) and ask Bob to try again |
+| Planning Analytics is not in the mode selector, or the skill is not listed | Bob has a different folder open. **File** → **Open Folder…** → the `pa-bob-agents-new` folder that contains `README.md` and `.bob` |
+| The two servers do not appear under **Workspace servers** | The file is not saved, or it is not valid JSON (a quote or comma got lost while pasting). Open `.bob/mcp.json`, look for red underlines, paste again and save |
+| A server shows an error or **Disconnected** | Check host, port and tenant ID against your group's link, in both `url` lines, then click ↻. Make sure the PA environment is running: open the link in your browser |
+| `401 Unauthorized` | The `Authorization` line changed. It must be `Basic cG06SUJNRGVtMHM=` in both server blocks |
+| `smartco` is not in the server list | Bob is connected to a different PA environment. Check the host, port and tenant ID with your facilitator |
+| Bob offers to edit `mcp.json` for you, or refuses to | Do it by hand as in Step 2; it is the same two-minute edit on every laptop |
+| Data queries fail with `409` or "Tool invocation failed" | Warm up the query engine: open your PA link in the browser, sign in as `pm` / `IBMDem0s` → **Data and Models** → **New workbench** → expand **smartco** → right-click a cube → **Add new view**, wait about 30 seconds, then ask again |
+
+<details>
+<summary>Working in a folder of your own instead</summary>
+
+Copy the repo's `.bob` folder (with `custom_modes.yaml`, `rules-planning-analytics` and `skills`) to the top of your folder, then do Step 2 in that folder. Or, to use the connection in every folder, choose **Global (All Workspaces)** as the Configuration Scope in Step 2a: Bob then opens `~/.bob/settings/mcp.json`. If both files define a server with the same name, the workspace file wins.
+
+</details>
 
 ---
 

@@ -38,7 +38,7 @@ This only needs to be done **once per session**.
 ```
 List all available TM1 servers
 ```
-Expected: 14 servers, including `smartco` — the server used throughout this lab. If `smartco` is not in the list at all, Bob is connected to a different Planning Analytics instance: check the host, port and tenant ID in your `mcp.json` with your facilitator.
+Expected: 14 servers, including `smartco` — the server used throughout this lab. If `smartco` is not in the list at all, Bob is connected to a different Planning Analytics instance: check the host, port and tenant ID in `.bob/mcp.json` with your facilitator.
 
 ![Bob lists the 14 TM1 servers via the PA MCP tool](assets/screenshots/lab1-ex1-01-list-servers.jpg)
 
@@ -238,10 +238,10 @@ from the MY_INITIALS_FPA_Variance cube on DemoGuide
 |---------|-----|
 | All cubes show `is_analyzed: false`, or "Cube not pre-analyzed" | Expected — pre-analysis is an administrator set-up step that hasn't been run on the workshop instance. Bob switches to MDX automatically |
 | `smartco` is not offered when Bob asks which server to use | Bob only suggests a few servers. Type `smartco` in the reply box, or name the server in the prompt |
-| `smartco` is missing from `List all available TM1 servers` | Bob is connected to a different PA instance. Check the host, port and tenant ID in `mcp.json` |
+| `smartco` is missing from `List all available TM1 servers` | Bob is connected to a different PA instance. Check the host, port and tenant ID in `.bob/mcp.json` |
 | `409` error on MDX queries | The PA query engine isn't running yet. Do the Step 0 warm-up in PAW, then retry |
 | "Member not found" | Bob calls `lookup_potential_members` and presents options |
-| Bob says building cubes or TI processes needs "Advanced mode" | Older copies of the skill say so. Reply `Go ahead in this mode` — Planning Analytics mode has the MCP tools for it. To fix it for good, reinstall the skill from Lab 0 |
+| Bob says building cubes or TI processes needs "Advanced mode" | Older copies of the skill say so. Reply `Go ahead in this mode` — Planning Analytics mode has the MCP tools for it. To fix it for good, get the latest workshop folder (`git pull`, or download it again) and open it as in Lab 0 |
 | TI process fails | Ask: `Show me the error logs for the last TI process` — Bob explains and fixes |
 | Some numbers in Bob's prose appear in italics and run together | Bob renders text between two `$` signs as a math formula. The numbers in the tables are correct |
 | Budget shows 0 or "Budget not loaded" | Budget is stored in version V2, Actual in V1. Add "(Actual = scenario Actual, version V1; Budget = scenario Budget, version V2)" to the prompt |
