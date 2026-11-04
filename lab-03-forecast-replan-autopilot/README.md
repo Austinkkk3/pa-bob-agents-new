@@ -2,7 +2,7 @@
 
 **Duration:** 30 minutes  
 **Mode:** 📊 Planning Analytics  
-**Prerequisite:** [Lab 1 Exercise 5](../lab-01-bob-planning-analytics-mcp/README.md) ✅ (`FPA_Variance` cube built)
+**Prerequisite:** [Lab 0](../lab-00-setup/README.md) ✅ · the shared `FPA_Variance` cube on `smartco` (loaded by your facilitator, see [Facilitator Setup](FACILITATOR-SETUP.md))
 
 ---
 
@@ -18,6 +18,14 @@ You will use Bob to:
 5. Verify the update
 
 One conversation. No external tools. No code.
+
+![What you do in Lab 3: find, explain, replan, write back, verify](assets/diagrams/lab3-00-what-you-do.png)
+
+Lab 1 and Lab 2 only read data. In Exercise 4 Bob runs the `FPA_Write_Forecast` TI process to write six reforecast values into a separate slice of the cube (scenario `FC-Q1`, version `V3`), so Actual (`V1`) and Budget (`V2`) are never touched:
+
+![The reforecast Bob writes back for NA Sales, Q1 2024](assets/diagrams/lab3-00-reforecast-q1.png)
+
+The cube already holds February and March actuals, so the chart also shows how close the replan came: revenue recovered in February as the timing classification predicted.
 
 | Exercise | Task | Time |
 |----------|------|------|
@@ -109,12 +117,12 @@ Expected calculation (budgets come from the CSV — Feb/Mar are not flat $500K/$
 ![Reforecast table for February and March](assets/screenshots/lab3-ex3-01-reforecast-table.jpg)
 
 ```
-What is the net Q1 impact on revenue and OpEx from these adjustments?
+For REV-001 and OPEX-001 only, what is the Q1 reforecast vs budget?
 ```
 
-Expected, for the two accounts being reforecast: REV-001 Q1 reforecast $1,585,000 vs budget $1,560,000 (**+$25K**), and OPEX-001 Q1 reforecast $417,000 vs budget $375,000 (**+$42K**).
+Expected: REV-001 Q1 reforecast $1,585,000 vs budget $1,560,000 (**+$25K**), and OPEX-001 Q1 reforecast $417,000 vs budget $375,000 (**+$42K**).
 
-> Check Bob's answer against its own reforecast table. In testing Bob called the deal slips a "wash" and reported revenue as +$2K. That ignores that the $200K recovery is larger than the $175K January miss.
+> Name the two accounts. With the vaguer question "What is the net Q1 impact on revenue and OpEx?" Bob answered at TOTAL-REV / TOTAL-OPEX level in testing: once it called the deal slips a "wash" (+$2K revenue), once it reported OpEx +$35K and left out the January overspend. Check Bob's answer against its own reforecast table.
 ---
 
 ## Exercise 4 — Write Back to PA
@@ -130,7 +138,7 @@ OPEX-001 2024-01 = 145000, OPEX-001 2024-02 = 133500, OPEX-001 2024-03 = 138500.
 Write one cell at a time and confirm each write.
 ```
 
-> Two things went wrong with a vaguer prompt in testing. Bob refused because older copies of the planning-analytics skill say TI work belongs in "Advanced mode" (the skill in this repo no longer does), and it planned 8 different cells (February and March only, plus REV-003 and OPEX-004). If Bob still asks you to switch modes, reply `Go ahead in this mode`.
+> Tested on November 4, 2026 with the skill from this repo: Bob wrote and confirmed all six cells in Planning Analytics mode without asking to switch modes. Older copies of the planning-analytics skill said TI work belongs in "Advanced mode"; if Bob still asks, reply `Go ahead in this mode`. Keep the exact cell list: with a vaguer prompt Bob once planned 8 different cells (February and March only, plus REV-003 and OPEX-004).
 
 > Bob will call `execute_tm1_processes_asynchronously` with the `FPA_Write_Forecast` TI process for each cell. You will see it confirm each write before moving to the next.
 
@@ -182,7 +190,7 @@ and confirm they are all 0.
 | V3 shows 0 after write | Ask Bob: `Read back V3 for REV-001 / DEPT-NA-SALES / FC-Q1 / 2024-01 in FPA_Variance` to confirm |
 | Bob calculates wrong recovery amount | Re-read Exercise 3 — confirm the total slipped value is $200K ($120K + $80K) |
 | Bob says writing needs "Advanced mode" | Reply `Go ahead in this mode` — Planning Analytics mode can run the TI process |
-| Text in Bob's answer turns into italics and runs together | Bob renders text between two `$` signs as a formula. The numbers in the tables are correct |
+| Text in Bob's answer turns into italics and runs together | Bob renders text between two `$` signs as a formula. The skill in this repo tells Bob to write amounts as `USD 175K`; with an older skill copy, ask `Repeat that without the $ sign`. The numbers in the tables are correct |
 
 ---
 

@@ -141,6 +141,7 @@ Output:
 - `list_cubes_with_ai_analysis_metadata` - Find pre-analyzed cubes
 
 ### Output Formats
+- **Currency amounts**: write them as `USD 175,000` or `USD 175K`, never with a `$` sign. Bob's chat renders any text between two `$` signs as a math formula, which turns sentences with two amounts into run-together italics. This applies to prose, lists and table cells.
 - **Markdown Tables**: Clean, hierarchical data presentation
 - **HTML Tables**: Multi-dimensional data with proper structure
 - **Narrative Summaries**: Business-focused insights and findings

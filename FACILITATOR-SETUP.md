@@ -73,9 +73,45 @@ All participants log into **your** Orchestrate tenant. Ask each person to prefix
 
 ---
 
+## Section 2b — Fresh environment: build `FPA_Variance` on smartco
+
+A newly reserved TechZone PA environment does **not** have the shared `FPA_Variance` cube that Lab 1 (Exercises 1–4), Lab 2 and Lab 3 use. Build it once per environment with Bob in **📊 Planning Analytics** mode, with this repo open as the workspace and Bob's MCP settings pointing at the new environment. Tested on November 3, 2026: about 6 minutes and about 6 Bob coins, no retries.
+
+```
+Stay in Planning Analytics mode: the PA MCP tools in this workspace can create dimensions, cubes and TI processes.
+This is the facilitator setup for a fresh workshop environment. First list the TM1 servers and the cubes on smartco;
+if a cube named FPA_Variance already exists, stop and tell me. Otherwise build the shared FPA_Variance model on the
+smartco server from the CSV files in lab-01-bob-planning-analytics-mcp/assets/ (dim_account.csv, dim_department.csv,
+dim_scenario.csv, dim_time.csv, dim_version.csv, fact_financial_data.csv), with exactly these names and no prefix.
+(1) Dimensions FPA_Account, FPA_Department, FPA_Scenario, FPA_Time and FPA_Version; the members are the id column of
+each CSV. In FPA_Account the parent_account column defines the hierarchy (ROOT > TOTAL-REV, TOTAL-COGS, TOTAL-OPEX >
+accounts); in FPA_Department parent_dept defines it (TOTAL-COMPANY > BU-* > departments). Store the descriptive CSV
+columns as text attributes, not aliases.
+(2) Dimension FPA_Measures with exactly two members: Amount (Numeric) and RootCause (String).
+(3) Cube FPA_Variance with the dimensions in this order: FPA_Account, FPA_Department, FPA_Scenario, FPA_Time,
+FPA_Version, FPA_Measures.
+(4) TI processes FPA_Build_Dimensions and FPA_Build_Time for the dimensions and FPA_Load_Facts for the data; the
+processes cannot read local files, so embed the rows in the code. FPA_Load_Facts loads all 280 rows: CellPutN for
+amount into Amount, and CellPutS for variance_explanation into RootCause where it is not empty (escape single quotes).
+Write each procedure as one physical line with statements separated by semicolons and no comments; insert elements
+with DimensionElementInsert in the Prolog and set every parent-child link explicitly with
+DimensionElementComponentAdd(dimension, parent, child, 1), otherwise the totals stay 0; create and fill attributes
+(AttrInsert, AttrPutS) in the Epilog, after the elements are committed.
+(5) Run the processes and verify with MDX: 280 non-empty Amount cells at leaf level; 86 non-empty RootCause cells,
+34 of them on scenario Actual; for 2024-01 at TOTAL-COMPANY, TOTAL-REV Budget (Budget, V2) 1,975,000 and Actual
+(Actual, V1) 1,828,000, TOTAL-COGS 125,000 and 135,000, TOTAL-OPEX 1,250,000 and 1,308,500; FC-Q1 / V3 empty.
+Report the results as a short list. Work only on smartco and do not change any other cube, dimension or process.
+```
+
+The rules in step (4) come from the first build, where Bob spent several extra minutes on attributes set before the elements existed and on totals that stayed 0 without explicit parent-child links.
+
+Then create the two Lab 3 processes as described in Section 3, and in Orchestrate pre-build the Lab 2 agents with [`setup-agents.sh`](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/setup-agents.sh) (no `VARIANT`).
+
+---
+
 ## Section 3 — Lab 3 Setup (Bob write-back)
 
-Run once before Lab 3. The `FPA_Write_Forecast` TI process has already been created on `smartco`. To verify:
+Run once before Lab 3. On an environment prepared for an earlier session, `FPA_Write_Forecast` and `FPA_Reset_Forecast` already exist on `smartco`; on a fresh environment, create them with the prompt in [`lab-03-forecast-replan-autopilot/FACILITATOR-SETUP.md`](lab-03-forecast-replan-autopilot/FACILITATOR-SETUP.md). To verify:
 
 ```
 In Bob (Planning Analytics mode):
@@ -84,7 +120,7 @@ In Bob (Planning Analytics mode):
 
 Expected: `FPA_Build_Dimensions`, `FPA_Build_Time`, `FPA_Load_Facts`, `FPA_Write_Forecast`, `FPA_Reset_Forecast`
 
-If `FPA_Write_Forecast` is missing, see [`lab-03-forecast-replan-autopilot/FACILITATOR-SETUP.md`](lab-03-forecast-replan-autopilot/FACILITATOR-SETUP.md).
+
 
 ---
 

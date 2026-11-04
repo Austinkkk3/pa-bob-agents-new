@@ -7,37 +7,34 @@
 
 ## What This Setup Does
 
-Creates the `FPA_Write_Forecast` TI process on `smartco` so participants can use Bob to write V3 forecast values back into the `FPA_Variance` cube.
+Creates the `FPA_Write_Forecast` and `FPA_Reset_Forecast` TI processes on `smartco`, so participants can use Bob to write V3 forecast values into the `FPA_Variance` cube and the facilitator can clear them afterwards.
 
 > **Good news — nothing else is needed:**
 > - `V3` already exists in the `FPA_Version` dimension ✅
 > - `FC-Q1` already exists in the `FPA_Scenario` dimension ✅
-> - `FPA_Variance` cube is already built (Lab 1 prerequisite) ✅
+> - `FPA_Variance` cube is already built on `smartco` ✅ (on a fresh environment, build it first: see [Section 2b of the root facilitator guide](../FACILITATOR-SETUP.md#section-2b--fresh-environment-build-fpa_variance-on-smartco))
 
 ---
 
-## Option A — Use Bob (Recommended, 2 minutes)
+## Option A — Use Bob (Recommended, 3–5 minutes)
 
-Switch to **Planning Analytics mode** in Bob and run:
+Switch to **Planning Analytics mode** in Bob and run this prompt. It creates both Lab 3 processes and tests them. Tested on November 3, 2026 on a fresh environment.
 
 ```
-On the smartco server, create a TI process called FPA_Write_Forecast with these 
-6 parameters: pTime (String, default "2024-01"), pAccount (String, default "REV-001"), 
-pDept (String, default "DEPT-NA-SALES"), pScenario (String, default "FC-Q1"), 
-pVersion (String, default "V3"), pAmount (Numeric, default 0).
-
-The epilog procedure should be a single line:
+Stay in Planning Analytics mode. Lab 3 setup on the smartco server (the FPA_Variance cube already exists there).
+(1) Create the TI process FPA_Write_Forecast with parameters pTime (String, default 2024-01), pAccount (String,
+default REV-001), pDept (String, default DEPT-NA-SALES), pScenario (String, default FC-Q1), pVersion (String,
+default V3) and pAmount (Numeric, default 0), whose epilog is
 CellPutN(pAmount, 'FPA_Variance', pAccount, pDept, pScenario, pTime, pVersion, 'Amount');
+(2) create the TI process FPA_Reset_Forecast with no parameters that sets Amount to 0 for scenario FC-Q1, version V3,
+months 2024-01, 2024-02 and 2024-03, for every leaf account and every leaf department, and touches no other scenario,
+version or month. Write each procedure as one physical line, statements separated by semicolons, no comments.
+(3) Test: run FPA_Write_Forecast to write 325000 to REV-001 / DEPT-NA-SALES / FC-Q1 / 2024-01 / V3 and read it back;
+then run FPA_Reset_Forecast and confirm that cell is 0 again and that FC-Q1 / V4 for the same cell is still 480000.
+Report the results as a short list. Do not change anything else.
 ```
 
-Then verify:
-
-```
-Test FPA_Write_Forecast on smartco: write 325000 to REV-001 / DEPT-NA-SALES / 
-FC-Q1 / 2024-01 / V3. Then read back V3 for that cell to confirm.
-```
-
-Expected: `REV-001 | V3 | 325,000.00` ✅
+Expected: the write reads back as 325,000, the reset brings it back to 0, and FC-Q1 / V4 stays 480,000. V4 holds the seeded forecasts from the CSV, so `FPA_Reset_Forecast` must never touch it.
 
 ---
 
@@ -94,7 +91,7 @@ Run the FPA_Reset_Forecast process on smartco to clear the FC-Q1 / V3 reforecast
 then read back FC-Q1 / V3 for NA Sales REV-001 and OPEX-001, 2024-01 to 2024-03, and confirm they are all 0.
 ```
 
-> Tested on October 26, 2026: all 6 cells written in Lab 3 were cleared. `FPA_Reset_Forecast` only clears 2024-01 to 2024-03. Values written to other months are not cleared.
+> Tested on October 26 and November 4, 2026: all 6 cells written in Lab 3 were cleared. `FPA_Reset_Forecast` only clears 2024-01 to 2024-03. Values written to other months are not cleared.
 
 Or run this MDX to check what V3 values exist before clearing:
 
