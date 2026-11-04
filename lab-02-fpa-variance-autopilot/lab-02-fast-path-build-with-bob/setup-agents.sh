@@ -75,7 +75,25 @@ orchestrate env add -n "$ENV_NAME" -u "$WXO_URL" </dev/null >/dev/null 2>&1 || e
 echo "   Paste your Orchestrate API key and press Enter (nothing is shown while you type):"
 orchestrate env activate "$ENV_NAME"
 
-read -r -s -p "   PA password for $PA_USER (nothing is shown while you type): " PA_PASSWORD; echo
+# Check the PA password against the PA MCP server before storing it in Orchestrate, so a typo
+# shows up here instead of as a 401/500 when the toolkit is created. The password is sent in a
+# header read from stdin, so it never appears in the process list.
+check_pa() {
+  local b64
+  b64="$(printf '%s' "$PA_USER:$PA_PASSWORD" | base64 | tr -d '\n')"
+  printf 'header = "Authorization: Basic %s"\n' "$b64" | curl -s -o /dev/null -w '%{http_code}' \
+    --max-time 30 --config - -X POST "$PA_MCP_URL" \
+    -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' \
+    -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"setup-agents","version":"1"}}}'
+}
+for attempt in 1 2 3; do
+  read -r -s -p "   PA password for $PA_USER (nothing is shown while you type): " PA_PASSWORD; echo
+  code="$(check_pa || true)"
+  if [ "$code" = "200" ]; then echo "   PA accepted the password"; break; fi
+  if [ "$code" = "000" ]; then echo "   No answer from $PA_MCP_URL: check PA_MCP_URL and that the PA environment is running"; exit 1; fi
+  echo "   PA did not accept user $PA_USER with that password (HTTP $code). Type it again, by hand."
+  [ "$attempt" = 3 ] && exit 1
+done
 
 echo "== 2/5 PA connection ($APP_ID)"
 orchestrate connections add -a "$APP_ID" >/dev/null 2>&1 || echo "   connection already exists, reusing it"
