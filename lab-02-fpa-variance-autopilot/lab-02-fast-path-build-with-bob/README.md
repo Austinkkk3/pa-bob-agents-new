@@ -126,7 +126,7 @@ Apart from some `[INFO]` lines from the ADK, the terminal shows:
 
 ```
 Building: pa_data_agent_az, fpa_variance_autopilot_az (connection planning-analytics-basic-az, toolkit planning-analytics-cube-mcp-az)
-== 1/5 Connect to Orchestrate (workshop)
+== 1/5 Connect to Orchestrate (wxo-xxxxxxxx)
    Paste your Orchestrate API key and press Enter (nothing is shown while you type):
    PA password for pm (nothing is shown while you type):
 == 2/5 PA connection (planning-analytics-basic-az)
