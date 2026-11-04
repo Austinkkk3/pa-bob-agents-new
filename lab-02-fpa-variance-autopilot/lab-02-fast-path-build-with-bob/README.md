@@ -208,6 +208,7 @@ Without `VARIANT`, the script builds the agents under their plain names (`pa_dat
 | `orchestrate: command not found` | The virtual environment is not active. Use the full command from Bob, which starts with `cd` and `source .../.venv-adk/bin/activate` |
 | Python version error during install | Install Python 3.12 and ask Bob to recreate `.venv-adk` with it |
 | `Error getting IBM_IAM Token` or `401` | The API key is wrong or was not pasted completely. Generate a new key and check that `WXO_URL` is the service instance URL from **API details** |
+| `401 ... Invalid authentication credentials` when creating the toolkit | The PA password was wrong (for example the API key was pasted again). Run the command again and type the PA password by hand |
 | `502 ... ConnectTimeout` when creating the toolkit | Wait a minute and run the command again; it reuses the connection that was already created |
 | Agent import says a tool is not found | Ask Bob to run `orchestrate tools list` and check that the 6 tools start with your toolkit name (`planning-analytics-cube-mcp-az:`) |
 | Bob rewrites the YAML or the instructions | Stop it and resend the prompt; the files must be used as they are |
