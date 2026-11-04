@@ -92,8 +92,9 @@ else
   orchestrate toolkits add --kind mcp --name "$TOOLKIT" \
     --description "IBM Planning Analytics cube tools (read-only subset for the workshop)" \
     --url "$PA_MCP_URL" --transport streamable_http --tools "$TOOLS" --app-id "$APP_ID" || {
-    echo "   Creating the toolkit failed. A 502 ConnectTimeout means Orchestrate could not reach"
-    echo "   the PA server in time: wait a minute and run this script again (it reuses what exists)."
+    echo "   Creating the toolkit failed. Run this script again (it reuses what exists):"
+    echo "   - 401 Invalid authentication credentials: the PA password was wrong; type it again"
+    echo "   - 502 ConnectTimeout: Orchestrate could not reach the PA server in time; wait a minute first"
     exit 1
   }
 fi
