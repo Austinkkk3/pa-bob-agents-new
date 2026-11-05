@@ -47,7 +47,7 @@ All three paths end with the same variance report. Everyone starts with [Lab 2.0
 | **How** | The agents are already built in your group's Orchestrate; you ask them questions in Chat and see how they reason | You send Bob one prompt; Bob sets up the Orchestrate ADK and builds your own copy of both agents | You create the connection, the agents and their tools by hand in the Orchestrate UI |
 | **Labs** | 2.0 → [Ready to Use](lab-02-ready-to-use/README.md) | 2.0 → [Fast Path](lab-02-fast-path-build-with-bob/README.md) | 2.0 → 2.1 → 2.2 → 2.5 |
 | **Time** | ~20 min | ~20 min | ~60 min |
-| **You need** | Access to your group's Orchestrate | Also Python 3.11–3.13, git and an Orchestrate API key | Rights to create agents in Orchestrate |
+| **You need** | Access to your group's Orchestrate | Also Python 3.11–3.14, git and an Orchestrate API key | Rights to create agents in Orchestrate |
 
 You can combine them: start with Ready to use, then take the Fast Path to build your own copy.
 
@@ -61,7 +61,7 @@ Your facilitator built both agents before the session. Everyone in your group sh
 
 **→ [Lab 2 Fast Path — Let Bob Build the Agents](lab-02-fast-path-build-with-bob/README.md)**
 
-You need Python 3.11–3.13, git, and an Orchestrate API key on top of the Lab 0 setup. The fast path lists everything to prepare. It is the only part of the workshop that uses Bob's **🤖 Agent** mode, because Bob runs commands on your laptop; everything else uses **📊 Planning Analytics** mode.
+You need Python 3.11–3.14, git, and an Orchestrate API key on top of the Lab 0 setup. The fast path lists everything to prepare. It is the only part of the workshop that uses Bob's **🤖 Agent** mode, because Bob runs commands on your laptop; everything else uses **📊 Planning Analytics** mode.
 
 ### Step-by-step path
 
