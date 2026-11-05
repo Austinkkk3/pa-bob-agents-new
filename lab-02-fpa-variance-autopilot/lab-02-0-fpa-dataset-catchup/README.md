@@ -5,9 +5,12 @@
 
 ---
 
-## Goal
+## In this lab
 
-Confirm `FPA_Variance` cube is loaded and spot-check the key variances the autopilot will investigate.
+> 📍 **Where:** Bob, 📊 Planning Analytics mode  
+> 🎯 **What you do:** Confirm that the shared `FPA_Variance` cube is there and look at the January 2024 variances the agents will report.  
+> ⚡ **Why it matters:** You see the right numbers before the agents do, so you can check their report against the cube instead of taking it on trust.  
+> ✅ **You leave with:** The numbers to check the Lab 2 report against, starting with NA Sales revenue at -$175K.
 
 > The shared `FPA_Variance` cube on `smartco` is loaded by your facilitator before the session. Run the check below and move on (~2 min). (Your own Lab 1 Exercise 5 model is a separate copy on `DemoGuide`.)
 
@@ -47,6 +50,8 @@ Bob also lists roll-up rows that cross the threshold (TOTAL-COMPANY, BU-PROD and
 > If the cube is missing, ask your facilitator. Do not rebuild it yourself: Lab 2 and Lab 3 need the exact shared copy on `smartco`.
 
 ---
+
+> 🌐 **Switching tools:** from here the agents live in watsonx Orchestrate, in your browser. The Fast Path is the exception: it starts in Bob, in 🤖 Agent mode. Keep Bob open; you come back to it in Lab 3.
 
 **Next, pick your path ([which one?](../README.md#choose-your-path)):**
 

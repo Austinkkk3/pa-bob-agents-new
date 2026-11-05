@@ -1,7 +1,15 @@
 # Lab 0 — Environment Setup
 
-**Duration:** 10–15 minutes  
-**Goal:** Open the workshop folder in Bob (this loads the Planning Analytics mode and skill), connect Bob to your group's Planning Analytics, and check the connection.
+**Duration:** 10–15 minutes
+
+---
+
+## In this lab
+
+> 📍 **Where:** Bob  
+> 🎯 **What you do:** Open the workshop folder in Bob, paste your group's Planning Analytics connection, and check that it works.  
+> ⚡ **Why it matters:** This is the one-time setup behind every other lab. Once Bob is connected, you can ask Planning Analytics questions, run analyses and change data from the Bob chat, without opening Planning Analytics Workspace or writing MDX.  
+> ✅ **You leave with:** Bob connected to your group's Planning Analytics, with the Planning Analytics mode and skill loaded.
 
 ---
 

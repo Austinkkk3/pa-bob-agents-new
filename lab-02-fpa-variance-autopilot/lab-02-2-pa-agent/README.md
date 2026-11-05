@@ -5,9 +5,12 @@
 
 ---
 
-## Goal
+## In this lab
 
-Build the **PA Data Agent** — the only sub-agent in this lab. It runs a fixed MDX query against `FPA_Variance` via MCP, reads the embedded root cause explanations from the cube, and returns a complete CFO-ready report. No CRM or ERP systems needed.
+> 📍 **Where:** watsonx Orchestrate, in your browser; Bob for Step 6  
+> 🎯 **What you do:** Build the PA Data Agent: give it the tested instructions and 6 read-only Planning Analytics tools, test it, then change its materiality rule with Bob.  
+> ⚡ **Why it matters:** Planning Analytics does the math (variances, thresholds, flags) in one MDX query, so every number is exact and auditable; the agent only turns the result into a report. That is what makes the output safe to send to a CFO.  
+> ✅ **You leave with:** A working PA Data Agent that returns the flagged variances with their root causes. No CRM or ERP system is needed.
 
 > 💡 **Design principle — PA does the math, the LLM writes the story.**
 > Variance $, variance %, the materiality test and the HIGH / MEDIUM / FAVORABLE flag are all MDX calculated members, so every number is deterministic and auditable. The agent only copies the flagged rows and adds a classification and a recommended action. In testing, letting the LLM compute or classify variances itself gave different answers on every run.
@@ -141,7 +144,7 @@ Expected: only 🔴 HIGH — DEPT-APAC-SALES REV-001: -$85,000 (-30.36%), root c
 
 Bob builds, Orchestrate runs: use Bob to change the agent's rule, then run the changed agent in Orchestrate. Both talk to the same Planning Analytics cube.
 
-1. In Bob, send:
+1. Switch to the Bob window (📊 Planning Analytics mode) and send:
 
 ```
 Open lab-02-fpa-variance-autopilot/lab-02-2-pa-agent/pa-data-agent.yaml. In its instructions,

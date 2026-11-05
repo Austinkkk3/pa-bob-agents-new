@@ -8,14 +8,12 @@
 
 ---
 
-## Goal
+## In this lab
 
-Embed the FP&A Variance Autopilot into a branded HTML page using the watsonx Orchestrate **wxoLoader** embed widget — no REST API calls, no tokens, no backend required.
-
-By the end of this lab you will have:
-- `saleslens-wxo-embed.html` running locally in a browser
-- The SalesLens AI branded chat interface powered by your orchestrator agent
-- Understanding of how to embed any watsonx Orchestrate agent into a web page
+> 📍 **Where:** watsonx Orchestrate and a local HTML page, in your browser  
+> 🎯 **What you do:** Embed the FP&A Variance Autopilot in a branded chat page with the Orchestrate **wxoLoader** embed widget.  
+> ⚡ **Why it matters:** The autopilot can sit where finance users already work, such as an intranet page, with no REST calls, tokens or backend code. The same steps work for any Orchestrate agent.  
+> ✅ **You leave with:** `saleslens-wxo-embed.html` running locally: the SalesLens AI chat page, answered by your orchestrator.
 
 ---
 
@@ -155,4 +153,5 @@ You have completed all sub-labs in the FP&A Variance Autopilot series.
 
 → **[Lab 2.8 (Bonus) — Get Started with watsonx Orchestrate ADK](../lab-02-8-adk/README.md)**  
 → **[Return to Lab 2 overview](../README.md)**  
+→ **[Lab 3 — Forecast Replan with Bob](../../lab-03-forecast-replan-autopilot/README.md)** *(optional; ⬅️ runs in Bob, in 📊 Planning Analytics mode)*  
 → **[Continue to Session 3 — Bring Your Own Scenario](../../session-03-your-scenario/README.md)**

@@ -5,9 +5,12 @@
 
 ---
 
-## Goal
+## In this lab
 
-Build the **FP&A Variance Autopilot** orchestrator. It delegates to the PA Data Agent and produces a single CFO-ready variance report with root cause explanations — all from Planning Analytics, no external APIs required.
+> 📍 **Where:** watsonx Orchestrate, in your browser  
+> 🎯 **What you do:** Build the FP&A Variance Autopilot, the agent people talk to. It hands the data work to the PA Data Agent and writes the final report.  
+> ⚡ **Why it matters:** One question returns the full month-end variance report in 1–2 minutes. Because the orchestrator only delegates, you can add more sub-agents later (ERP, CRM, HR) without changing how people ask.  
+> ✅ **You leave with:** The end-to-end autopilot: 4 material variances for January 2024, with root causes and recommended actions.
 
 ```
 User prompt
@@ -113,6 +116,6 @@ Summary: revenue -$147,000 (-7.44%), OpEx +$58,500 (+4.68%). The orchestrator ma
 
 ---
 
-**→ [Lab 3 — Forecast Replan with Bob](../../lab-03-forecast-replan-autopilot/README.md)** *(optional: write a new forecast back to PA)*  
+**→ [Lab 3 — Forecast Replan with Bob](../../lab-03-forecast-replan-autopilot/README.md)** *(optional: write a new forecast back to PA; ⬅️ runs in Bob, so switch back to the Bob window in 📊 Planning Analytics mode)*  
 **→ [Lab 2.7 — Embed the Autopilot in a web page](../lab-02-7-chat-embed/README.md)** *(optional)*  
 **→ [Session 3 — Your Scenario](../../session-03-your-scenario/README.md)**

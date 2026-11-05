@@ -6,6 +6,15 @@
 
 ---
 
+> ⬅️ **Back to Bob.** Lab 2 ran in watsonx Orchestrate in your browser; Lab 3 runs in Bob. Switch to the Bob window, start a new task (**+**), and check that the mode is **📊 Planning Analytics**. If you took the Lab 2 Fast Path, Bob is still in 🤖 Agent mode.
+
+## In this lab
+
+> 📍 **Where:** Bob, 📊 Planning Analytics mode  
+> 🎯 **What you do:** Go from variance to a new forecast in one conversation: find the January misses, explain them, replan Q1, write the new forecast into Planning Analytics, and check it.  
+> ⚡ **Why it matters:** A reforecast normally means exporting to a spreadsheet, redoing the numbers by hand and keying them back into Planning Analytics. Here Bob does the arithmetic, shows you the table before anything is written, and writes the cells through a TI process: the whole loop in about 30 minutes.  
+> ✅ **You leave with:** A Q1 2024 reforecast for NA Sales stored in Planning Analytics (`FC-Q1` / `V3`), checked against the actuals, and a summary paragraph for the CFO.
+
 ## What You Will Do
 
 Lab 1 taught you how to **read** data from Planning Analytics. This lab teaches you how to **change** it.
@@ -41,6 +50,8 @@ Switch to **📊 Planning Analytics** mode before starting.
 
 ## Exercise 1 — Find the Variances
 
+**Why:** the same starting point as the autopilot: which numbers missed, and by how much, at account level.
+
 ```
 Show me January 2024 actual vs budget by department and account in FPA_Variance on smartco
 (Actual = scenario Actual, version V1; Budget = scenario Budget, version V2).
@@ -68,6 +79,8 @@ Expected: NA Sales REV-001 ranked first.
 
 ## Exercise 2 — Understand the Root Cause
 
+**Why:** the cause decides the replan. A timing slip moves money to a later month; a structural change shifts the monthly run-rate. Bob reads the cause stored in the cube.
+
 ```
 For the NA Sales revenue miss of -$175K in January 2024:
 The root cause is deal slippage — two enterprise deals moved to February.
@@ -93,6 +106,8 @@ Expected: the revenue miss is **timing** ($200K of confirmed deals covers the $1
 ---
 
 ## Exercise 3 — Calculate the Reforecast
+
+**Why:** Bob does the arithmetic and shows the table before anything is written, so you review numbers, not formulas.
 
 ```
 Based on the root causes above, calculate the Q1 2024 reforecast for NA Sales.
@@ -127,6 +142,8 @@ Expected: REV-001 Q1 reforecast $1,585,000 vs budget $1,560,000 (**+$25K**), and
 
 ## Exercise 4 — Write Back to PA
 
+**Why:** this step normally means typing numbers into Planning Analytics by hand or preparing an upload file. Bob writes the six cells through a TI process and confirms each one.
+
 Once you're happy with the numbers:
 
 ```
@@ -149,6 +166,8 @@ Watch for the confirmation after each cell. Bob first reads the process paramete
 ---
 
 ## Exercise 5 — Verify
+
+**Why:** the check reads the values back from Planning Analytics, not from Bob's earlier answer, so you see what is really stored. Then Bob turns it into a CFO update.
 
 ```
 For NA Sales REV-001 and OPEX-001, January through March 2024, show:

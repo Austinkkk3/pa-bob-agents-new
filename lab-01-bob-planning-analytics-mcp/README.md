@@ -6,6 +6,13 @@
 
 ---
 
+## In this lab
+
+> 📍 **Where:** Bob, 📊 Planning Analytics mode  
+> 🎯 **What you do:** Work with Planning Analytics in plain English: explore the model, query it, run a variance analysis, look for outliers, and build a small TM1 model from CSV files.  
+> ⚡ **Why it matters:** Questions that normally need a view built in Planning Analytics Workspace or an MDX query take one sentence. In Exercise 5 Bob builds a 6-dimension model and loads 280 rows in about 6.5 minutes; by hand that is an estimated 1–1.5 hours of TM1 development.  
+> ✅ **You leave with:** A saved variance view, a PDF exploration report, and your own TM1 model on `DemoGuide`.
+
 ## What You Will Do
 
 | Exercise | Task | Time |
@@ -34,6 +41,8 @@ This only needs to be done **once per session**.
 ---
 
 ## Exercise 1 — Explore
+
+**Why:** before you ask questions you need to know what is there. Bob lists servers, cubes and dimensions in seconds, without opening Planning Analytics Workspace.
 
 ```
 List all available TM1 servers
@@ -65,6 +74,8 @@ Use `FPA_Variance` as the cube name. Expected: 6 dimensions — `FPA_Account`, `
 
 ## Exercise 2 — Query
 
+**Why:** this is the everyday task, a budget vs actual number. You ask in a sentence and Bob writes the MDX for you.
+
 > Use a pre-analyzed cube from Exercise 1 if there is one. If `FPA_Variance` is **not** pre-analyzed (the default on TechZone), the prompts below still work — Bob falls back to MDX automatically and finds Budget in version V2 and Actual in V1.
 
 ```
@@ -88,6 +99,8 @@ Expected for January 2024 total revenue: TOTAL-COMPANY $1,975,000 budget vs $1,8
 ---
 
 ## Exercise 3 — Variance Analysis
+
+**Why:** this is the month-end analysis an FP&A analyst does by hand. Bob calculates and ranks the variances, then saves the view so colleagues can open it in Planning Analytics Workspace.
 
 ```
 Perform a full variance analysis on revenue for January 2024 across all departments
@@ -122,6 +135,8 @@ in the FPA_Variance cube on smartco. Show year-over-year growth rates.
 
 ## Exercise 4 — Outlier & Impact Analysis
 
+**Why:** unusual numbers are hard to spot across many cells. Bob scans them for you and produces a PDF report you can share, in one request.
+
 > **Set expectations before running:**
 > - Outlier detection on 6 departments × 1 month typically returns "no outliers detected" — too few points. Try the wider slice below for better results.
 > - `perform_impact_analysis` returns unlabeled x/y scores; the two-tool chain with `get_impact_analysis_summary` may not work. The **PDF report** is the main deliverable for this exercise.
@@ -154,6 +169,8 @@ in the FPA_Variance cube on smartco
 ---
 
 ## Exercise 5 — Build a TM1 Model from CSV
+
+**Why:** building a model is normally TM1 developer work, mostly TurboIntegrator code. Bob writes, runs and checks the processes: about 6.5 minutes instead of an estimated 1–1.5 hours.
 
 The CSV files are in [`lab-01-bob-planning-analytics-mcp/assets/`](./assets/).
 
