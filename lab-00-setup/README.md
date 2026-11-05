@@ -30,9 +30,11 @@
   ```bash
   git clone https://github.com/Austinkkk3/pa-bob-agents-new.git
   ```
-- Without git: on the [repo page](https://github.com/Austinkkk3/pa-bob-agents-new), click **Code** → **Download ZIP**, then unzip it.
+- Without git: on the [repo page](https://github.com/Austinkkk3/pa-bob-agents-new), click **Code** → **Download ZIP**, then unzip it. The folder is called `pa-bob-agents-new-main`; that is fine, use it wherever this guide says `pa-bob-agents-new`.
 
-**Open it in Bob:** **File** → **Open Folder…** → select the `pa-bob-agents-new` folder (the one that contains `README.md`).
+Both give you the same files. A clone can be updated later with `git pull`; with the ZIP, download it again.
+
+**Open it in Bob:** **File** → **Open Folder…** → select the `pa-bob-agents-new` folder (the one that contains `README.md`). On a Mac, Finder hides the `.bob` folder inside it; it is there, and Bob sees it.
 
 Open the whole folder, not a subfolder. The Planning Analytics mode, its rules and the skill are in the `.bob` folder at the top of the repo, and Bob loads them only when that folder is the workspace. Nothing to install or restart.
 
@@ -54,7 +56,7 @@ MCP (Model Context Protocol) is the bridge that lets Bob call your Planning Anal
 
 ### 2a. Open the file
 
-In the Bob panel: ⚙ (**Settings**) → **MCP** → **+** → **Configuration Scope**: `pa-bob-agents-new` → **Open Configuration File**.
+In the Bob panel: ⚙ (**Settings**) → **MCP** → **+** → **Configuration Scope**: `pa-bob-agents-new` (or `pa-bob-agents-new-main` if you downloaded the ZIP) → **Open Configuration File**.
 
 ![Add MCP Server, scope set to the workshop folder](assets/screenshots/lab0-03-add-mcp-server.jpg)
 
