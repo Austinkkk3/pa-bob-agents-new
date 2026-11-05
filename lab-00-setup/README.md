@@ -30,7 +30,7 @@
   ```bash
   git clone https://github.com/Austinkkk3/pa-bob-agents-new.git
   ```
-- Without git: on the [repo page](https://github.com/Austinkkk3/pa-bob-agents-new), click **Code** → **Download ZIP**, then unzip it. The folder is called `pa-bob-agents-new-main`; that is fine, use it wherever this guide says `pa-bob-agents-new`.
+- Without git: on the [repo page](https://github.com/Austinkkk3/pa-bob-agents-new), click **Code** → **Download ZIP**, then unzip it. The folder is called `pa-bob-agents-new-main`; that is fine, use it wherever this guide says `pa-bob-agents-new`. On Windows, unzip with **Extract All** first (do not open the folder inside the ZIP), and check for a folder inside a folder: `pa-bob-agents-new-main\pa-bob-agents-new-main`. Open the inner one, the one that has `README.md` directly in it.
 
 Both give you the same files. A clone can be updated later with `git pull`; with the ZIP, download it again.
 
@@ -116,9 +116,10 @@ Listing servers works right away. Queries that read cube data need the Planning 
 
 | Symptom | Fix |
 |---------|-----|
-| Planning Analytics is not in the mode selector, or the skill is not listed | Bob has a different folder open. **File** → **Open Folder…** → the `pa-bob-agents-new` folder that contains `README.md` and `.bob` |
+| Planning Analytics is not in the mode selector, or the skill is not listed | Bob has a different folder open. **File** → **Open Folder…** → the `pa-bob-agents-new` folder that contains `README.md` and `.bob`. On Windows, a ZIP often unzips to a folder inside a folder: open the inner one |
 | The two servers do not appear under **Workspace servers** | The file is not saved, or it is not valid JSON (a quote or comma got lost while pasting). Open `.bob/mcp.json`, look for red underlines, paste again and save |
 | A server shows an error or **Disconnected** | Check host, port and tenant ID against your group's link, in both `url` lines, then click ↻. Make sure the PA environment is running: open the link in your browser |
+| The pasted file shows errors, often after copying it from an email or chat message | The quotes may have turned into curly quotes (“ ”). Copy from the `.json` file itself, opened in Bob, not from the message text |
 | `401 Unauthorized` | The `Authorization` line changed. It must be `Basic cG06SUJNRGVtMHM=` in both server blocks |
 | `smartco` is not in the server list | Bob is connected to a different PA environment. Check the host, port and tenant ID with your facilitator |
 | Bob offers to edit `mcp.json` for you, or refuses to | Do it by hand as in Step 2; it is the same two-minute edit on every laptop |
