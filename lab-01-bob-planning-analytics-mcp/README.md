@@ -27,16 +27,18 @@ Switch to **📊 Planning Analytics** mode before starting.
 
 ---
 
-## Step 0 — Warm Up the PA Query Engine (30 seconds)
+## Step 0 — Warm Up the PA Query Engine (facilitator)
 
-> ⚠️ **Do this before Exercise 2.** On a freshly started TechZone instance the PA grid service (query engine) uses lazy initialisation and may not be running yet. MDX queries will return a `409` error until it is warmed up.
+> Your facilitator warms up each group's Planning Analytics before the session, so you can skip this step. Do it yourself only if a query in Exercise 2 fails with `409` or "Tool invocation failed".
 
-1. Open the PAW URL from your TechZone reservation in a browser and log in as `pm` / `IBMDem0s`
-2. Go to **Data and Models** → **New workbench** → expand any server → right-click any cube → **Add new view**
+On a freshly started TechZone instance the PA grid service (query engine) starts on first use. Until then MDX queries fail, while listing servers and cubes still works. To warm it up:
+
+1. Open your group's PA link in a browser and log in as `pm` / `IBMDem0s`
+2. Go to **Data and Models** → **New workbench** → expand **smartco** → right-click any cube → **Add new view**
 3. Wait ~30 seconds
-4. Return to Bob — queries will now work
+4. Return to Bob and ask again
 
-This only needs to be done **once per session**.
+One warm-up per PA environment is enough for the whole group.
 
 ---
 
