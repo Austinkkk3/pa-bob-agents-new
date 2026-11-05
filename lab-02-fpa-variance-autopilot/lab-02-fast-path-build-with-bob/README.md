@@ -38,7 +38,7 @@ Your initials are added to every name, so your agents never overwrite someone el
 | You need | Check |
 |----------|-------|
 | IBM Bob | From Lab 0 |
-| Python 3.11–3.13 | `python3 --version`. The Python that ships with macOS is too old: install Python 3.12 from python.org or with Homebrew |
+| Python 3.11–3.14 | `python3 --version`. The Python that ships with macOS is too old: install Python 3.12 or later from python.org or with Homebrew |
 | git | `git --version`. On a Mac, the first `git` command may ask you to install the Command Line Tools: accept and wait a few minutes |
 | Access to github.com and pypi.org | Bob downloads this repo and the ADK from them. Some company networks block them; if so, try another network |
 | macOS or Linux | Tested on macOS. On Windows the script needs a bash terminal (WSL or Git Bash); without one, use the [step-by-step path](../README.md#step-by-step-path) |
@@ -80,7 +80,7 @@ Use the files in the repo exactly as they are: do not rewrite the YAML files, th
 or the agent instructions. Run steps 1, 2 and 4 yourself in the terminal, one at a time.
 1. Clone https://github.com/Austinkkk3/pa-bob-agents-new.git into ~/pa-bob-agents-client,
    or run git pull if it is already there.
-2. Check that Python 3.11-3.13 is available, create the virtual environment
+2. Check that Python 3.11-3.14 is available, create the virtual environment
    ~/pa-bob-agents-client/.venv-adk with it and install ibm-watsonx-orchestrate.
 3. Do not run setup-agents.sh yourself: it asks for my Orchestrate API key and PA password,
    and your command runner cannot hide what I type. Give me one command to paste into the

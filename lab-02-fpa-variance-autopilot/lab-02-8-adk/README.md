@@ -21,7 +21,7 @@
 ## Prerequisites
 
 - Basic familiarity with terminal / bash commands
-- Python 3.11–3.13 installed
+- Python 3.11–3.14 installed
 - Access to a watsonx Orchestrate instance (workshop tenant or [30-day free trial](https://www.ibm.com/products/watsonx-orchestrate))
 
 ---
@@ -38,13 +38,13 @@ The ADK gives developers full control to:
 
 ## Step 1 — Check Python Version
 
-The ADK requires **Python 3.11–3.13**. Check your version:
+The ADK requires **Python 3.11–3.14**. Check your version:
 
 ```bash
 python --version
 ```
 
-If your version is outside the 3.11–3.13 range, install a compatible version from [python.org](https://www.python.org/downloads/) or use `pyenv` on macOS/Linux.
+If your version is outside the 3.11–3.14 range, install a compatible version from [python.org](https://www.python.org/downloads/) or use `pyenv` on macOS/Linux.
 
 Also confirm `pip` is available:
 
