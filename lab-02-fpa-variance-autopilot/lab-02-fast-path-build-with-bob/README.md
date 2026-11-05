@@ -9,7 +9,14 @@
 
 ---
 
-## Goal
+## In this lab
+
+> 📍 **Where:** Bob in 🤖 Agent mode and the VS Code terminal, then watsonx Orchestrate in your browser  
+> 🎯 **What you do:** Send Bob one prompt. Bob installs the Orchestrate ADK and builds both Lab 2 agents, with your initials in their names.  
+> ⚡ **Why it matters:** About 15 minutes instead of about 60 clicking through Labs 2.1–2.5. The agents are built from YAML files, so the same build can be repeated in any Orchestrate environment.  
+> ✅ **You leave with:** Your own FP&A Variance Autopilot, giving the same report as the shared one.
+
+## What gets built
 
 Instead of clicking through the Orchestrate UI, you give Bob one prompt. Bob sets up the watsonx Orchestrate **Agent Development Kit (ADK)** on your laptop and gives you one command to run. That command creates everything below in Orchestrate. Then Bob checks the result.
 
@@ -180,6 +187,7 @@ Company totals: revenue -$147,000 (-7.44%). Expect 1–2 minutes for the answer.
 - Switch Bob back to **📊 Planning Analytics** mode for the rest of the workshop.
 - Try the prompts in [Lab 2.5 — More Prompts to Try](../lab-02-5-orchestrator/README.md#more-prompts-to-try) with your agent.
 - Change the agent's materiality rule with Bob in [Lab 2.2 Step 6](../lab-02-2-pa-agent/README.md#step-6--change-the-agent-with-bob-5-minutes). Open **PA Data Agent (AZ)** where that step says "your PA Data Agent".
+- **→ [Lab 3 — Forecast Replan with Bob](../../lab-03-forecast-replan-autopilot/README.md)** *(optional)*: back in Bob, start a new task in 📊 Planning Analytics mode.
 - **→ [Continue to Session 3](../../session-03-your-scenario/README.md)**
 
 ---

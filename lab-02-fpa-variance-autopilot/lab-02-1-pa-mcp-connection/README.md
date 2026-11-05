@@ -5,9 +5,12 @@
 
 ---
 
-## Goal
+## In this lab
 
-Create the `planning-analytics-basic` connection and store team credentials in watsonx Orchestrate so agents can authenticate with the PA MCP server.
+> 📍 **Where:** watsonx Orchestrate, in your browser  
+> 🎯 **What you do:** Create the `planning-analytics-basic` connection and store the team credentials for the Planning Analytics MCP server.  
+> ⚡ **Why it matters:** The credentials are stored once, in Orchestrate, and every agent that uses the connection signs in with them. Nobody pastes a password into an agent.  
+> ✅ **You leave with:** A connection with credentials in Draft and Live, ready for the PA Data Agent.
 
 ---
 

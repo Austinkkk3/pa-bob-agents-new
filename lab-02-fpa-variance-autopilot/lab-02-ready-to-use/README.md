@@ -8,9 +8,14 @@
 
 ---
 
-## Goal
+## In this lab
 
-Ask the FP&A Variance Autopilot for the month-end variance report, see how it reached the answer, and try your own questions.
+> 📍 **Where:** watsonx Orchestrate → **Chat**, in your browser  
+> 🎯 **What you do:** Ask the pre-built FP&A Variance Autopilot for the January 2024 variance report, see how it got there, and ask your own questions.  
+> ⚡ **Why it matters:** This is how a business user would use it: no build, no MDX, no spreadsheet. One question returns the variance report with root causes in 1–2 minutes.  
+> ✅ **You leave with:** Variance reports for January and March 2024, and a clear picture of what the two agents do behind the answer.
+
+The two agents:
 
 | Agent | What it does |
 |-------|--------------|
@@ -86,7 +91,7 @@ In Orchestrate you can also open ☰ → **Active inventory** → **Agents** →
 ## Next
 
 - **Your own copy to change:** technical participants can build one with Bob in about 20 minutes on the [Fast Path](../lab-02-fast-path-build-with-bob/README.md). Your initials are added to its name, so the shared agents stay untouched.
-- **[Lab 3 — Forecast Replan with Bob](../../lab-03-forecast-replan-autopilot/README.md)** *(optional)*: turn the variances into a new forecast written back to Planning Analytics.
+- **[Lab 3 — Forecast Replan with Bob](../../lab-03-forecast-replan-autopilot/README.md)** *(optional)*: turn the variances into a new forecast written back to Planning Analytics. ⬅️ Lab 3 runs in Bob: switch back to the Bob window and start a new task in 📊 Planning Analytics mode.
 - **[Session 3 — Your Scenario](../../session-03-your-scenario/README.md)**: map the autopilot pattern to your own data.
 
 ---

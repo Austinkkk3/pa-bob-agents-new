@@ -5,6 +5,15 @@
 
 ---
 
+## In this lab
+
+> 📍 **Where:** Bob  
+> 🎯 **What you do:** Map the autopilot pattern to a planning process of your own, and let Bob draft the adapted design and, optionally, a ready-to-import agent YAML.  
+> ⚡ **Why it matters:** The same pattern (Planning Analytics does the math, agents explain and report) fits headcount, capex, cost or cash. You leave with a concrete starting point instead of a blank page.  
+> ✅ **You leave with:** A short design for your own scenario and, optionally, an agent YAML you can import into Orchestrate.
+
+---
+
 ## Map the Pattern to Your Own Use Case
 
 Answer these three questions (one sentence each), then paste them into Bob.

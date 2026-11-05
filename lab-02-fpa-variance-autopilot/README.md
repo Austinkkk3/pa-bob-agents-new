@@ -6,6 +6,13 @@
 
 ---
 
+## In this lab
+
+> 📍 **Where:** Lab 2.0 in Bob; the agents in watsonx Orchestrate, in your browser  
+> 🎯 **What you do:** Use, or build, two AI agents that read the `FPA_Variance` cube, flag the material variances, read the root cause stored with each one, and write a CFO-ready report.  
+> ⚡ **Why it matters:** Month-end variance commentary usually takes an FP&A team 3–4 days of pulling numbers, chasing explanations and writing it up. The autopilot answers one chat question in 1–2 minutes, and anyone with access to Orchestrate can ask it.  
+> ✅ **You leave with:** A working variance autopilot in Orchestrate: the shared one, ready to use, or your own copy.
+
 ## What You Will Build
 
 A multi-agent system in watsonx Orchestrate that automatically:

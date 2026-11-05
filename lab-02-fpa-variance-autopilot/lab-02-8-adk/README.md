@@ -11,9 +11,12 @@
 
 ---
 
-## Goal
+## In this lab
 
-Install the watsonx Orchestrate **Agent Development Kit (ADK)**, connect it to your SaaS instance, and deploy your first agent entirely from the CLI — no UI required.
+> 📍 **Where:** A terminal on your laptop, then watsonx Orchestrate in your browser to test  
+> 🎯 **What you do:** Install the watsonx Orchestrate **Agent Development Kit (ADK)**, connect it to your instance, and deploy a first agent from the command line.  
+> ⚡ **Why it matters:** Agents become YAML files you can keep in git, review and deploy to any environment with one command, instead of rebuilding them by hand in each UI.  
+> ✅ **You leave with:** The ADK set up on your laptop and a first agent deployed from the CLI.
 
 ## Prerequisites
 
