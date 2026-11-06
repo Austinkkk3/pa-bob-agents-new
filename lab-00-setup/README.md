@@ -92,7 +92,7 @@ Go back to the **Bob Settings** tab → **MCP**, and set the filter to **Workspa
 
 ![Both workspace MCP servers connected](assets/screenshots/lab0-05-mcp-connected.jpg)
 
-> 🔒 `.bob/mcp.json` is in the repo's `.gitignore`, so your group's address is never committed if you push your copy.
+> 🔒 `.bob/mcp.json` holds your group's Planning Analytics address. If you push your copy of the repo anywhere, leave this file out. (It is deliberately not in `.gitignore`: Bob refuses to open files that match an ignore pattern, which would block Step 2a.)
 
 ---
 
@@ -123,6 +123,7 @@ Listing servers works right away. Queries that read cube data need the Planning 
 | `401 Unauthorized` | The `Authorization` line changed. It must be `Basic cG06SUJNRGVtMHM=` in both server blocks |
 | `smartco` is not in the server list | Bob is connected to a different PA environment. Check the host, port and tenant ID with your facilitator |
 | Bob offers to edit `mcp.json` for you, or refuses to | Do it by hand as in Step 2; it is the same two-minute edit on every laptop |
+| **Open Configuration File** says `Access denied: … .bob/mcp.json matches an ignore pattern` | Your copy of the repo is from before November 5. Open `.gitignore` at the top of the folder, delete the line `.bob/mcp.json`, save, and click **Open Configuration File** again. Or download the repo again |
 | Data queries fail with `409` or "Tool invocation failed" | Warm up the query engine: open your PA link in the browser, sign in as `pm` / `IBMDem0s` → **Data and Models** → **New workbench** → expand **smartco** → right-click a cube → **Add new view**, wait about 30 seconds, then ask again |
 
 <details>

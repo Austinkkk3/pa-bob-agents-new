@@ -3,10 +3,6 @@ bob-task-*.json
 FACILITATOR_GUIDE.md
 Planning Analytics Workshop Schedule.pdf
 
-# ── Bob MCP connection (Lab 0) ──────────────────────────────────────────────
-# Holds the group's PA address; each participant creates it in Lab 0 Step 2.
-.bob/mcp.json
-
 # ── Node ──────────────────────────────────────────────────────────────────────
 node_modules/
 npm-debug.log*
