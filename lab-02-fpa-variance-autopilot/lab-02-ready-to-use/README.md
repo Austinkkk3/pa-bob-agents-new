@@ -2,9 +2,9 @@
 
 **For:** everyone; nothing to install beyond Lab 0
 **Duration:** ~20 minutes
-**Prerequisite:** [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · access to your group's watsonx Orchestrate (invitation from your facilitator)
+**Prerequisite:** [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · the Orchestrate username and password from your facilitator
 
-> Your facilitator has already built the two Lab 2 agents in your group's Orchestrate environment. Everyone in your group uses the same agents, so please **do not edit, deploy or delete them**. Want your own copy to change? Take the [Fast Path](../lab-02-fast-path-build-with-bob/README.md).
+> Your facilitator has already built the two Lab 2 agents in the workshop's Orchestrate environment. Everyone in the workshop uses the same agents, so please **do not edit, deploy or delete them**. Want your own copy to change? Take the [Fast Path](../lab-02-fast-path-build-with-bob/README.md).
 
 ---
 
@@ -24,16 +24,42 @@ The two agents:
 
 ---
 
-## Step 1 — Sign in to your group's Orchestrate
+## Step 1 — Sign in to the workshop Orchestrate
 
-Open the watsonx Orchestrate link from your facilitator or from the invitation email, and sign in with your IBMid. Use your group's link (A or B): each group's agents read that group's Planning Analytics.
+Both groups use the same Orchestrate and the same sign-in. Ask your facilitator for the username and password.
+
+1. Open **https://cloud.ibm.com/authorize/itzwatsonx9** and sign in with the username and password from your facilitator. This is the IBM Technology Zone sign-in page: your own IBMid doesn't work here.
+
+   ![IBM Technology Zone sign-in page](../assets/screenshots/lab2-signin-01-techzone-login.jpg)
+
+2. IBM Cloud opens. Click the menu icon (☰) at the top left, then **Resource list**.
+
+   ![IBM Cloud menu with Resource list](../assets/screenshots/lab2-signin-02-resource-list-menu.jpg)
+
+3. Under **AI / Machine Learning**, find the row whose **Product** is **watsonx Orchestrate**. Its name starts with `itz-wxo-`. Click the name.
+
+   ![Resource list with the watsonx Orchestrate row](../assets/screenshots/lab2-signin-03-orchestrate-resource.jpg)
+
+4. Click **Launch watsonx Orchestrate**. You need nothing else on this page.
+
+   ![Launch watsonx Orchestrate button](../assets/screenshots/lab2-signin-04-launch.jpg)
+
+5. Orchestrate opens on its home page. **Chat** is where you talk to the agents (Step 2). To see all agents, open **Active inventory** → **Agents**.
+
+   ![Orchestrate home page with Chat and Active inventory](../assets/screenshots/lab2-signin-05-orchestrate-home.jpg)
+
+6. The agent you use is **FP&A Variance Autopilot**, with no suffix. The copies with a suffix, such as *(2)* or *(EU)*, are other builds: don't use or change them.
+
+   ![Agents list with FP&A Variance Autopilot](../assets/screenshots/lab2-signin-06-agents.jpg)
+
+> Sign-in page says the username or password is wrong? Type them by hand instead of pasting them, and ask your facilitator if it still fails.
 
 ---
 
 ## Step 2 — Run the variance report
 
 1. ☰ → **Chat**.
-2. In the agent list, pick **FP&A Variance Autopilot**. In some environments the name ends with a number, for example *FP&A Variance Autopilot (2)*.
+2. In the agent list, pick **FP&A Variance Autopilot**, the one with no suffix (see Step 1.6).
 3. Send:
 
 ```

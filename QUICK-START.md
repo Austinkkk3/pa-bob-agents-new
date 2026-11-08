@@ -14,7 +14,7 @@ Everything you need to get going in the first 5 minutes.
 | **PA Password** | `IBMDem0s` |
 | **Cube MCP URL** | `http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp` |
 | **Server MCP URL** | `http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/analysis/mcp` |
-| **Orchestrate URL** | Ask your facilitator |
+| **Orchestrate sign-in** | https://cloud.ibm.com/authorize/itzwatsonx9 · username and password from your facilitator ([steps](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md#step-1--sign-in-to-the-workshop-orchestrate)) |
 | **Bob base64 auth** | `cG06SUJNRGVtMHM=` (`pm:IBMDem0s`) |
 
 ---

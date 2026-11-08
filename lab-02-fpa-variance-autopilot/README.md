@@ -44,10 +44,10 @@ All three paths end with the same variance report. Everyone starts with [Lab 2.0
 | | 🚀 Ready to use | ⚡ Fast path | 🧭 Step-by-step path |
 |-|----------------|-------------|---------------------|
 | **Who** | Everyone, especially business users who want to use the agents | Technical participants comfortable pasting a command into a terminal | Everyone who wants to see each piece in the Orchestrate UI |
-| **How** | The agents are already built in your group's Orchestrate; you ask them questions in Chat and see how they reason | You send Bob one prompt; Bob sets up the Orchestrate ADK and builds your own copy of both agents | You create the connection, the agents and their tools by hand in the Orchestrate UI |
+| **How** | The agents are already built in the workshop's Orchestrate; you ask them questions in Chat and see how they reason | You send Bob one prompt; Bob sets up the Orchestrate ADK and builds your own copy of both agents | You create the connection, the agents and their tools by hand in the Orchestrate UI |
 | **Labs** | 2.0 → [Ready to Use](lab-02-ready-to-use/README.md) | 2.0 → [Fast Path](lab-02-fast-path-build-with-bob/README.md) | 2.0 → 2.1 → 2.2 → 2.5 |
 | **Time** | ~20 min | ~20 min | ~60 min |
-| **You need** | Access to your group's Orchestrate | Also Python 3.11–3.14, git and an Orchestrate API key | Rights to create agents in Orchestrate |
+| **You need** | The Orchestrate username and password from your facilitator | Also Python 3.11–3.14, git and an Orchestrate API key | Rights to create agents in Orchestrate |
 
 You can combine them: start with Ready to use, then take the Fast Path to build your own copy.
 
@@ -55,7 +55,7 @@ You can combine them: start with Ready to use, then take the Fast Path to build 
 
 **→ [Lab 2 Ready to Use — Talk to the Pre-built Agents](lab-02-ready-to-use/README.md)**
 
-Your facilitator built both agents before the session. Everyone in your group shares them, so you ask questions and look, but do not edit them.
+Your facilitator built both agents before the session. Everyone in the workshop shares them, so you ask questions and look, but do not edit them.
 
 ### Fast path
 
@@ -91,7 +91,7 @@ Your facilitator will provide:
 - **PA:** `TECHZONE_HOST`, `PORT`, `TENANT_ID`, `USERNAME`, `PASSWORD`
 - **Orchestrate:** Tenant URL
 
-For the ready-to-use path, your facilitator invites you to your group's Orchestrate. For the fast path, you also generate an **Orchestrate API key** yourself (Profile icon → **Settings** → **API details**).
+For the ready-to-use path, you sign in to the workshop's Orchestrate with the username and password from your facilitator: see [Ready to use, Step 1](lab-02-ready-to-use/README.md#step-1--sign-in-to-the-workshop-orchestrate). For the fast path, you also generate an **Orchestrate API key** yourself (Profile icon → **Settings** → **API details**).
 
 ---
 
