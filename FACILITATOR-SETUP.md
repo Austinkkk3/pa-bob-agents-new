@@ -67,7 +67,7 @@ Give each person a card for their group. Keep it out of the public repo: it hold
 | Item | Value |
 |------|-------|
 | Group | A or B |
-| Orchestrate | Link from the TechZone share invitation; sign in with their own IBMid |
+| Orchestrate | Either the link from the TechZone share invitation (they sign in with their own IBMid), or the TechZone sign-in link with the reservation's username and password. [Lab 2 Ready to use, Step 1](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md#step-1--sign-in-to-the-workshop-orchestrate) walks participants through the second way |
 | PA link for Bob (Lab 0) | `http://<TECHZONE_HOST>:<PORT>/?tenantId=<TENANT_ID>…` from the group's reservation |
 | PA username / password | `pm` / `IBMDem0s` |
 | MCP config for Bob (Lab 0 Step 2) | The group's ready-made `mcp.json`: the [Lab 0 template](lab-00-setup/mcp.json) with the group's host, port and tenant filled in. Participants paste it into `.bob/mcp.json`; the fastest way through Lab 0 |
