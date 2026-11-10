@@ -48,9 +48,7 @@ Both groups use the same Orchestrate and the same sign-in. Ask your facilitator 
 
    ![Orchestrate home page with Chat and Active inventory](../assets/screenshots/lab2-signin-05-orchestrate-home.jpg)
 
-6. The agent you use is **FP&A Variance Autopilot**, with no suffix. The copies with a suffix, such as *(2)* or *(EU)*, are other builds: don't use or change them.
-
-   ![Agents list with FP&A Variance Autopilot](../assets/screenshots/lab2-signin-06-agents.jpg)
+6. The agent you use is **FP&A Variance Autopilot**
 
 > Sign-in page says the username or password is wrong? Type them by hand instead of pasting them, and ask your facilitator if it still fails.
 
