@@ -64,10 +64,18 @@ Bob creates `.bob/mcp.json` and opens it. It contains only `{ "mcpServers": {} }
 
 ### 2b. Paste your group's configuration
 
-Select everything in the file (**Cmd+A**, or **Ctrl+A** on Windows) and paste over it:
+**You got a file from your facilitator (`group-A-mcp.json` or `group-B-mcp.json`)**:
 
-- **Your facilitator gave you your group's configuration:** paste it as it is and save (**Cmd+S** / **Ctrl+S**). Go to 2c.
-- **You only have the Planning Analytics link:** paste the template [`lab-00-setup/mcp.json`](mcp.json), then replace three placeholders, each in **both** `url` lines:
+1. Open that file (in Bob: **File → Open File**, or any text editor), select all (**Cmd+A** / **Ctrl+A**) and copy (**Cmd+C** / **Ctrl+C**).
+2. Go back to `.bob/mcp.json`, select all and paste over it (**Cmd+V** / **Ctrl+V**).
+3. Save (**Cmd+S** / **Ctrl+S**). Go to 2c.
+
+Nothing to edit: the file already has your group's address and the workshop user.
+
+<details>
+<summary>No file? Build it from the Planning Analytics link instead</summary>
+
+Paste the template [`lab-00-setup/mcp.json`](mcp.json) over everything in `.bob/mcp.json`, then replace three placeholders, each in **both** `url` lines:
 
 | Placeholder | Where it is in your link | Example |
 |-------------|--------------------------|---------|
@@ -85,6 +93,8 @@ Leave the `Authorization` lines as they are: `Basic cG06SUJNRGVtMHM=` is the wor
 > ```
 > From this Planning Analytics link, give me the HOST, the PORT and the TENANT_ID (the tenantId value, not the accountId): <your link>
 > ```
+
+</details>
 
 ### 2c. Check the connection
 
