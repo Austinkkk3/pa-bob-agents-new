@@ -12,7 +12,7 @@
 > ⚡ **Why it matters:** You see the right numbers before the agents do, so you can check their report against the cube instead of taking it on trust.  
 > ✅ **You leave with:** The numbers to check the Lab 2 report against, starting with NA Sales revenue at -$175K.
 
-> The shared `FPA_Variance` cube on `smartco` is loaded by your facilitator before the session. Run the check below and move on (~2 min). (Your own Lab 1 Exercise 5 model is a separate copy on `DemoGuide`.)
+> The shared `FPA_Variance` cube on `smartco` is loaded by your facilitator before the session (using your own PA environment? Build it once with Bob: [FACILITATOR-SETUP, Section 2b](../../FACILITATOR-SETUP.md#section-2b--fresh-environment-build-fpa_variance-on-smartco)). Run the check below and move on (~2 min). (Your own Lab 1 Exercise 5 model is a separate copy on `DemoGuide`.)
 
 ---
 
@@ -47,7 +47,7 @@ Bob also lists roll-up rows that cross the threshold (TOTAL-COMPANY, BU-PROD and
 
 ![Flagged variances for January 2024](../assets/screenshots/lab2-0-02-variance-flags.jpg)
 
-> If the cube is missing, ask your facilitator. Do not rebuild it yourself: Lab 2 and Lab 3 need the exact shared copy on `smartco`.
+> If the cube is missing, ask your facilitator. Do not build your own variant of it: Lab 2 and Lab 3 need the exact `FPA_Variance` copy built by [FACILITATOR-SETUP, Section 2b](../../FACILITATOR-SETUP.md#section-2b--fresh-environment-build-fpa_variance-on-smartco).
 
 ---
 
@@ -55,6 +55,7 @@ Bob also lists roll-up rows that cross the threshold (TOTAL-COMPANY, BU-PROD and
 
 **Next, pick your path ([which one?](../README.md#choose-your-path)):**
 
-- 🚀 **[Lab 2 Ready to Use — Talk to the Pre-built Agents](../lab-02-ready-to-use/README.md)**
-- ⚡ **[Lab 2 Fast Path — Let Bob Build the Agents](../lab-02-fast-path-build-with-bob/README.md)**
+- ⚡ **[Lab 2 Fast Path — Let Bob Build the Agents](../lab-02-fast-path-build-with-bob/README.md)** (recommended)
 - 🧭 **[Lab 2.1 — Configure the PA MCP Connection](../lab-02-1-pa-mcp-connection/README.md)** (step by step)
+
+> The 🚀 Ready to use path (pre-built agents) is retired: its environment has expired. For pre-built agents, contact Austin Zhang.

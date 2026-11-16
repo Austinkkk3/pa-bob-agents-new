@@ -52,7 +52,7 @@ Used in Lab 2 only. Recommended setup: one Orchestrate environment per group, pa
 ### Set up each group's Orchestrate
 
 1. Reserve a watsonx Orchestrate environment in IBM TechZone (watsonx collection), one per PA environment.
-2. Pre-build the two Lab 2 agents for the [Ready-to-use path](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md): run [`setup-agents.sh`](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/setup-agents.sh) with that group's `WXO_URL` and `PA_MCP_URL` and **no** `VARIANT`. It takes about 5 minutes, asks for the Orchestrate API key and the PA password in the terminal, and checks the password against PA before storing it.
+2. *(Optional, for a demo or a business audience)* Pre-build the two Lab 2 agents so participants can use them as in the [Ready-to-use lab](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md) (that lab's original environment has expired; update its Step 1 with your own sign-in details). Run [`setup-agents.sh`](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/setup-agents.sh) with that group's `WXO_URL` and `PA_MCP_URL` and **no** `VARIANT`. It takes about 5 minutes, asks for the Orchestrate API key and the PA password in the terminal, and checks the password against PA before storing it.
 3. Test in Orchestrate → **Chat** → **FP&A Variance Autopilot**, January 2024: 4 material variances, revenue -$147,000 (-7.44%).
 4. Add the participants with the reservation's **Share** menu (the IBMid email each person sent you). Try it first with one internal and one external address.
 

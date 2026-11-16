@@ -17,8 +17,8 @@
 
 ---
 
-> ⚠️ **Shared tenant — prefix your agent name with your initials.**
-> This workshop uses a shared Orchestrate environment. If two participants import an agent with the same name, the second import overwrites the first. Use your initials as a prefix everywhere: agent name in the UI **and** the `name:` field inside the YAML before importing.
+> ⚠️ **Sharing an Orchestrate environment with others? Prefix your agent name with your initials.**
+> If you have your own Orchestrate environment, you can skip this. If two participants import an agent with the same name, the second import overwrites the first. Use your initials as a prefix everywhere: agent name in the UI **and** the `name:` field inside the YAML before importing.
 > Example: `JD_pa_data_agent` instead of `pa_data_agent`.
 
 > 📋 **FPA_Variance data convention:**
@@ -46,7 +46,7 @@
 
 ![Agent profile with name, model and description](../assets/screenshots/lab2-2-02-agent-profile.jpg)
 
-**ADK:** `orchestrate agents import --file ./pa-data-agent.yaml`
+**ADK:** `orchestrate agents import --file ./pa-data-agent.yaml` creates the agent with its instructions but **without tools**: you still add them in Steps 3–4. To build everything with the ADK in one go, use the [Fast Path](../lab-02-fast-path-build-with-bob/README.md).
 
 ---
 

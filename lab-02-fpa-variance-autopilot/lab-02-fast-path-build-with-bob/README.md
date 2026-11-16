@@ -3,7 +3,7 @@
 **For:** technical participants who are comfortable pasting a command into a terminal
 **Duration:** ~15 minutes
 **Replaces:** Labs 2.1, 2.2 (Steps 1–5) and 2.5 (Steps 1–4). You end with the same two agents and the same report.
-**Prerequisite:** [Lab 0](../../lab-00-setup/README.md) ✅ · [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · a watsonx Orchestrate environment where you can build agents
+**Prerequisite:** [Lab 0](../../lab-00-setup/README.md) ✅ · [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · your own watsonx Orchestrate environment where you can build agents (for example a TechZone watsonx Orchestrate reservation)
 
 > Want to see every piece being built in the Orchestrate UI? Use the [step-by-step path](../README.md#step-by-step-path) instead.
 
@@ -14,7 +14,7 @@
 > 📍 **Where:** Bob in 🤖 Agent mode and the VS Code terminal, then watsonx Orchestrate in your browser  
 > 🎯 **What you do:** Send Bob one prompt. Bob installs the Orchestrate ADK and builds both Lab 2 agents, with your initials in their names.  
 > ⚡ **Why it matters:** About 15 minutes instead of about 60 clicking through Labs 2.1–2.5. The agents are built from YAML files, so the same build can be repeated in any Orchestrate environment.  
-> ✅ **You leave with:** Your own FP&A Variance Autopilot, giving the same report as the shared one.
+> ✅ **You leave with:** Your own FP&A Variance Autopilot, giving the same report as the step-by-step path.
 
 ## What gets built
 
@@ -218,6 +218,7 @@ Without `VARIANT`, the script builds the agents under their plain names (`pa_dat
 | `Error getting IBM_IAM Token` or `401` | The API key is wrong or was not pasted completely. Generate a new key and check that `WXO_URL` is the service instance URL from **API details** |
 | `401 ... Invalid authentication credentials` when creating the toolkit | The PA password was wrong (for example the API key was pasted again). Run the command again and type the PA password by hand |
 | `502 ... ConnectTimeout` when creating the toolkit | Wait a minute and run the command again; it reuses the connection that was already created |
+| Agent import fails with an error about the model or `llm` | The YAML files use `groq/openai/gpt-oss-120b` (GPT-OSS 120B via Groq), the model the labs were tested with. Ask Bob to run `orchestrate models list`. If that model is not in your environment, change only the `llm:` line in both `.adk.yaml` files to a listed model and run the command again; the expected numbers may then differ slightly |
 | Agent import says a tool is not found | Ask Bob to run `orchestrate tools list` and check that the 6 tools start with your toolkit name (`planning-analytics-cube-mcp-az:`) |
 | Bob rewrites the YAML or the instructions | Stop it and resend the prompt; the files must be used as they are |
 | You pasted the API key into the Bob chat by mistake | Delete that key in Orchestrate (**Settings → API details**), generate a new one, and delete that Bob task |
