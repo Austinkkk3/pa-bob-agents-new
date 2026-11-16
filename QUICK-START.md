@@ -14,7 +14,7 @@ Everything you need to get going in the first 5 minutes.
 | **PA Password** | `IBMDem0s` |
 | **Cube MCP URL** | `http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp` |
 | **Server MCP URL** | `http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/analysis/mcp` |
-| **Orchestrate** | Your own watsonx Orchestrate environment where you can create agents (the shared workshop environment has expired) |
+| **Orchestrate** | Your own watsonx Orchestrate environment where you can create agents: [reserve on TechZone](https://techzone.ibm.com/collection/69cab99b72e4cbb50d5a1b45?platform=6a9827ac39d106720ddb08ed) (the shared workshop environment has expired) |
 | **Bob base64 auth** | `cG06SUJNRGVtMHM=` (`pm:IBMDem0s`) |
 
 ---

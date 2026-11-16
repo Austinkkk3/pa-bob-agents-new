@@ -40,8 +40,8 @@
 | Requirement | Details |
 |-------------|---------|
 | **IBM Bob IDE** | [Download](https://bob.ibm.com/download) · min 200 coins |
-| **IBM Planning Analytics** | TechZone environment — URL + credentials from facilitator |
-| **watsonx Orchestrate** | Your own environment (TechZone reservation, trial or SaaS) where you can create agents |
+| **IBM Planning Analytics** | TechZone environment — [reserve on TechZone](https://techzone.ibm.com/my/reservations/create/69fe431559b0d2bd258c6c7b), or URL + credentials from your facilitator |
+| **watsonx Orchestrate** | Your own environment where you can create agents — [reserve on TechZone](https://techzone.ibm.com/collection/69cab99b72e4cbb50d5a1b45?platform=6a9827ac39d106720ddb08ed), or a trial or SaaS tenant |
 | **Laptop** | macOS or Windows with internet access |
 
 ---

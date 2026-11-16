@@ -83,8 +83,8 @@ You need your own watsonx Orchestrate environment, plus Python 3.11–3.14, git,
 
 ## Credentials Needed
 
-- **PA:** `TECHZONE_HOST`, `PORT`, `TENANT_ID`, `USERNAME`, `PASSWORD` for a Planning Analytics environment that has the `FPA_Variance` cube on `smartco`. A fresh TechZone PA environment does not have it yet: build it once with Bob, see [FACILITATOR-SETUP, Section 2b](../FACILITATOR-SETUP.md#section-2b--fresh-environment-build-fpa_variance-on-smartco).
-- **Orchestrate:** your own watsonx Orchestrate environment (for example a TechZone reservation from the watsonx collection). For the fast path, also an **Orchestrate API key** (Profile icon → **Settings** → **API details**).
+- **PA:** `TECHZONE_HOST`, `PORT`, `TENANT_ID`, `USERNAME`, `PASSWORD` for a Planning Analytics environment that has the `FPA_Variance` cube on `smartco`. Reserve one on [TechZone (Planning Analytics)](https://techzone.ibm.com/my/reservations/create/69fe431559b0d2bd258c6c7b). A fresh reservation does not have the cube yet: build it once with Bob, see [FACILITATOR-SETUP, Section 2b](../FACILITATOR-SETUP.md#section-2b--fresh-environment-build-fpa_variance-on-smartco).
+- **Orchestrate:** your own watsonx Orchestrate environment. Reserve one on [TechZone (watsonx Orchestrate)](https://techzone.ibm.com/collection/69cab99b72e4cbb50d5a1b45?platform=6a9827ac39d106720ddb08ed). For the fast path, also an **Orchestrate API key** (Profile icon → **Settings** → **API details**).
 
 ---
 

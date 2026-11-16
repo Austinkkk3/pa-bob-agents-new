@@ -3,7 +3,7 @@
 **For:** technical participants who are comfortable pasting a command into a terminal
 **Duration:** ~15 minutes
 **Replaces:** Labs 2.1, 2.2 (Steps 1–5) and 2.5 (Steps 1–4). You end with the same two agents and the same report.
-**Prerequisite:** [Lab 0](../../lab-00-setup/README.md) ✅ · [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · your own watsonx Orchestrate environment where you can build agents (for example a TechZone watsonx Orchestrate reservation)
+**Prerequisite:** [Lab 0](../../lab-00-setup/README.md) ✅ · [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · your own watsonx Orchestrate environment where you can build agents ([reserve one on TechZone](https://techzone.ibm.com/collection/69cab99b72e4cbb50d5a1b45?platform=6a9827ac39d106720ddb08ed))
 
 > Want to see every piece being built in the Orchestrate UI? Use the [step-by-step path](../README.md#step-by-step-path) instead.
 
