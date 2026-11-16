@@ -25,7 +25,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Connection ID** | `planning-analytics-basic` |
+| **Connection ID** | `planning-analytics-basic` (sharing the Orchestrate environment with others? add your initials, for example `planning-analytics-basic-jd`) |
 | **Display name** | `Planning Analytics (Basic Auth)` |
 
 3. **Save and continue**
@@ -38,7 +38,13 @@
    - **Server URL** (if the form asks for one): `http://<TECHZONE_HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp`
 5. **Configure live environment** → **Paste draft configuration** (copies the settings *and* the password to Live) → **Add connection**
 
-> ADK: `orchestrate connections create --name planning-analytics-basic --auth-type basic --credential-type team`
+> ADK equivalent (what the fast path's `setup-agents.sh` runs):
+> ```
+> orchestrate connections add -a planning-analytics-basic
+> orchestrate connections configure -a planning-analytics-basic --env draft --type team --kind basic --url "<PA_MCP_URL>"
+> orchestrate connections set-credentials -a planning-analytics-basic --env draft -u pm -p "<PA_PASSWORD>"
+> ```
+> Repeat the last two commands with `--env live`.
 
 ---
 

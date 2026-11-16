@@ -14,7 +14,7 @@ Everything you need to get going in the first 5 minutes.
 | **PA Password** | `IBMDem0s` |
 | **Cube MCP URL** | `http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/cube/mcp` |
 | **Server MCP URL** | `http://<HOST>:<PORT>/api/<TENANT_ID>/v0/agentic-ai/analysis/mcp` |
-| **Orchestrate sign-in** | https://cloud.ibm.com/authorize/itzwatsonx9 · username and password from your facilitator ([steps](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md#step-1--sign-in-to-the-workshop-orchestrate)) |
+| **Orchestrate** | Your own watsonx Orchestrate environment where you can create agents: [reserve on TechZone](https://techzone.ibm.com/collection/69cab99b72e4cbb50d5a1b45?platform=6a9827ac39d106720ddb08ed) (the shared workshop environment has expired) |
 | **Bob base64 auth** | `cG06SUJNRGVtMHM=` (`pm:IBMDem0s`) |
 
 ---
@@ -48,7 +48,7 @@ Expected: 6 dimensions — FPA_Account, FPA_Department, FPA_Scenario, FPA_Time, 
 |-----|----------------|----------|
 | [Lab 0](lab-00-setup/README.md) | Open the repo folder in Bob, paste the MCP config into `.bob/mcp.json` | Bob settings |
 | [Lab 1](lab-01-bob-planning-analytics-mcp/README.md) | Query, analyse, build TM1 model | Bob + PA MCP |
-| [Lab 2](lab-02-fpa-variance-autopilot/README.md) | Multi-agent variance autopilot ([🚀 ready to use](lab-02-fpa-variance-autopilot/lab-02-ready-to-use/README.md) · [⚡ fast path](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/README.md): Bob builds it) | watsonx Orchestrate |
+| [Lab 2](lab-02-fpa-variance-autopilot/README.md) | Multi-agent variance autopilot ([⚡ fast path](lab-02-fpa-variance-autopilot/lab-02-fast-path-build-with-bob/README.md): Bob builds it, recommended · [🧭 step by step](lab-02-fpa-variance-autopilot/README.md#step-by-step-path)) | watsonx Orchestrate |
 | [Lab 3](lab-03-forecast-replan-autopilot/README.md) | Forecast write-back to PA | Bob |
 
 ---

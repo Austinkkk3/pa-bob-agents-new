@@ -1,5 +1,15 @@
 # Lab 2 Ready to Use — Talk to the Pre-built Agents
 
+> ⛔ **This path is no longer available as written.** It was built for a client workshop: the agents were pre-built in that workshop's Orchestrate environment, and that environment has expired. The sign-in link and credentials in Step 1 no longer work.
+>
+> **Build your own agents instead (recommended):**
+> - ⚡ [Fast Path — Let Bob Build the Agents](../lab-02-fast-path-build-with-bob/README.md) (~20 min)
+> - 🧭 [Step-by-step path](../README.md#step-by-step-path), starting with [Lab 2.1](../lab-02-1-pa-mcp-connection/README.md) (~60 min)
+>
+> Once your agents are built, Steps 2–5 below still work as a guide to using them: pick your own **FP&A Variance Autopilot** in Chat.
+>
+> Need ready-to-use, pre-built agents for a demo or workshop? Contact **Austin Zhang** (IBM Canada, Data & AI).
+
 **For:** everyone; nothing to install beyond Lab 0
 **Duration:** ~20 minutes
 **Prerequisite:** [Lab 2.0](../lab-02-0-fpa-dataset-catchup/README.md) ✅ · the Orchestrate username and password from your facilitator

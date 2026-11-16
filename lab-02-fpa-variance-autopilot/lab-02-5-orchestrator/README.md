@@ -35,11 +35,11 @@ Open `PA Data Agent` and make sure Test 5.2 from Lab 2.2 passes in its Preview (
 
 | Field | Value |
 |-------|-------|
-| **Name** | `FP&A Variance Autopilot` |
+| **Name** | `FP&A Variance Autopilot` (prefix with your initials on a shared environment) |
 | **Description** | Orchestrator for FP&A variance analysis. Delegates to PA Data Agent to detect material budget variances in Planning Analytics and produce a CFO-ready report with root cause explanations from the cube. |
 | **Model** | `GPT-OSS 120B — OpenAI (via Groq)` (the default — keep it) |
 
-**ADK:** `orchestrate agents import --file ./fpa-orchestrator-agent.yaml`
+**ADK:** `orchestrate agents import --file ./fpa-orchestrator-agent.yaml` (import `pa_data_agent` first: it is listed as the collaborator)
 
 ---
 
@@ -53,7 +53,7 @@ Open [`fpa-orchestrator-agent.yaml`](fpa-orchestrator-agent.yaml), copy **everyt
 
 1. In the agent editor, open the **Agents** tab
 2. Click **Add agents** → **Local instance** (not *Catalog*)
-3. Search for `PA Data Agent`, tick it → **Add to agent**
+3. Search for `PA Data Agent` (or your initials-prefixed name from Lab 2.2), tick it → **Add to agent**
 
 ![Add agents — choose Local instance](../assets/screenshots/lab2-5-01-add-agents-local-instance.jpg) ![Select the PA Data Agent](../assets/screenshots/lab2-5-02-select-pa-data-agent.jpg)
 

@@ -124,10 +124,8 @@ instructions: |
     - RECOMMENDED ACTIONS: numbered list
     - Target: under 600 words
 
-# Tools: added in the Orchestrate UI after import (Tools -> Add tool -> MCP server ->
-# planning-analytics-mcp). Select these 6 tools:
-#   get_available_tm1_servers, get_tm1_cubes, get_cube_dimensions,
-#   get_cube_sample_members, execute_mdx_and_get_view, lookup_potential_members
+# Tools: the 6 tools listed under tools: above come from the 'planning-analytics-cube-mcp'
+# toolkit that setup-agents.sh creates before it imports this file (renamed with VARIANT).
 #
 # Design note: PA (MDX calculated members) does the deterministic math - variance,
 # variance %, materiality, HIGH/MEDIUM/FAVORABLE flag. The LLM only copies the
