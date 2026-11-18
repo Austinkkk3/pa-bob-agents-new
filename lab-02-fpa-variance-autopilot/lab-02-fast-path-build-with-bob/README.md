@@ -53,6 +53,16 @@ Your initials are added to every name, so your agents never overwrite someone el
 | Orchestrate API key | Same **API details** tab → **Generate API key**. Copy it right away; it is shown only once | Typed in the terminal only |
 | PA password | For user `pm`, from your facilitator (see [QUICK-START](../../QUICK-START.md#your-credentials)) | Typed in the terminal only |
 
+**Where to find the API key and Service instance URL**
+
+Click the **Profile icon** (top right) → **Settings**:
+
+![Profile → Settings](../assets/screenshots/lab2-fp-00-profile-settings.jpg)
+
+Then go to the **API details** tab. Copy the **Service instance URL** for the prompt. Click **Generate API key** (you will paste it in the terminal in Step 3, not in Bob):
+
+![API details tab](../assets/screenshots/lab2-fp-01-api-details.jpg)
+
 > 🔒 Never paste the API key or the PA password into the Bob chat. Bob's chat and its own command runner show everything you type. You enter both only in the VS Code terminal in Step 3, where they stay hidden.
 
 ---
@@ -106,11 +116,15 @@ For example, step 3 of the prompt could end up like this:
 
 3. Send the prompt.
 
+![Bob with the Fast Path prompt in Agent mode](../assets/screenshots/lab2-fp-02-bob-agent-prompt.jpg)
+
 ---
 
 ## Step 2 — Approve Bob's commands
 
 Bob asks before it runs each command. Read each one and click **Approve once**. In order, Bob will:
+
+![Bob asks to approve each command](../assets/screenshots/lab2-fp-03-bob-approve-command.jpg)
 
 1. Clone (or update) the repo into `~/pa-bob-agents-client`
 2. Check which Python version you have
@@ -121,6 +135,10 @@ Bob asks before it runs each command. Read each one and click **Approve once**. 
 ---
 
 ## Step 3 — Run the command in the VS Code terminal
+
+Bob finishes Steps 1 and 2 on its own and gives you a single command block to paste:
+
+![Bob shows the terminal command to run](../assets/screenshots/lab2-fp-05-bob-steps-done-command.jpg)
 
 1. Open the VS Code terminal: **View → Terminal** (or ⌘J / Ctrl+J).
 2. Paste the command Bob gave you and press Enter.
@@ -171,7 +189,11 @@ Run the FP&A variance analysis for January 2024 on the FPA_Variance cube on smar
 Identify all material variances, explain the root causes, and generate a full variance report.
 ```
 
-Expected: the same report as [Lab 2.5](../lab-02-5-orchestrator/README.md#step-5--run-the-end-to-end-autopilot), with 4 material variances:
+Expected: the same report as [Lab 2.5](../lab-02-5-orchestrator/README.md#step-5--run-the-end-to-end-autopilot), with 4 material variances.
+
+![FP&A Variance Autopilot report in Orchestrate](../assets/screenshots/lab2-5-03-e2e-report.jpg)
+
+The 4 material variances:
 
 - 🔴 HIGH — NA Sales REV-001: -$175,000
 - 🔴 HIGH — NA Sales OPEX-001: +$25,000
